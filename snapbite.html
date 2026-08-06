@@ -1,117 +1,134 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SnapBite — Privacy Policy</title>
+<title>SnapBiteAI — Privacy Policy</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
-.container { max-width: 800px; margin: 0 auto; padding: 60px 24px 120px; }
-h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; color: #00C896; }
-h2 { font-size: 22px; font-weight: 700; margin: 32px 0 12px; }
-p { font-size: 16px; margin-bottom: 12px; color: #424245; }
-ul { padding-left: 24px; margin-bottom: 12px; }
-li { font-size: 16px; color: #424245; margin-bottom: 6px; }
-.header { text-align: center; padding: 60px 0 40px; }
-.header .logo { font-size: 60px; margin-bottom: 16px; }
-.footer { text-align: center; padding: 40px 0; color: #86868b; font-size: 14px; }
-.badge { display: inline-block; background: #E0F7F1; color: #00A878; padding: 4px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
-.updated { color: #86868b; font-size: 14px; margin-bottom: 32px; }
+.container { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; color: #00C896; }
+h2 { font-size: 18px; font-weight: 700; margin: 24px 0 10px; color: #1d1d1f; }
+p, li { font-size: 15px; color: #424245; }
+ul { padding-left: 20px; margin-bottom: 12px; }
+li { margin-bottom: 6px; }
+.header { text-align: center; padding: 40px 0 32px; }
+.header .logo { font-size: 48px; margin-bottom: 12px; }
+.badge { display: inline-block; background: #E0F7F1; color: #00A878; padding: 4px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; }
+.updated { color: #86868b; font-size: 13px; margin-top: 8px; }
+.footer { text-align: center; padding: 32px 0 0; color: #86868b; font-size: 13px; border-top: 1px solid #e5e5e5; margin-top: 40px; }
+.provider-card { background: #fff; border-radius: 12px; padding: 14px 16px; margin: 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.provider-card strong { color: #1d1d1f; }
+.provider-card .desc { font-size: 13px; color: #86868b; margin-top: 2px; }
+.do-not { background: #E0F7F1; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+.do-not li { color: #006B4A; font-size: 14px; }
 </style>
 </head>
 <body>
 <div class="container">
+
 <div class="header">
-<div class="logo">📸</div>
-<span class="badge">PRIVACY FIRST</span>
-<h1>SnapBite Privacy Policy</h1>
-<p class="updated">Last updated: July 21, 2026</p>
+<h1>SnapBiteAI Privacy Policy</h1>
+<p class="updated">Last updated: August 2026</p>
 </div>
 
-<p>This Privacy Policy describes how SnapBite ("we", "us", or "our") handles your data when you use our iOS application. We are committed to protecting your privacy and being transparent about our data practices.</p>
+<p>SnapBiteAI ("we", "us", or "our") is committed to transparency about how your data is handled. This policy covers our iOS application.</p>
 
-<h2>🔥 Our Core Promise</h2>
-<p><strong>We do not collect, store, or sell your personal data.</strong> Your food photos, nutrition logs, and health data stay on your device.</p>
+<h2>🔒 Core Principle</h2>
+<p><strong>Your data stays on your device.</strong> We do not operate any servers. Your meal logs, photos, and health data are stored locally using Apple's SwiftData framework and are never uploaded to us.</p>
 
-<h2>1. Data Stored Locally on Your Device</h2>
-<p>The following data is stored exclusively on your iPhone using Apple's SwiftData framework and is never sent to our servers:</p>
+<h2>1. Data Stored on Your Device</h2>
+<p>The following data is stored exclusively on your iPhone:</p>
 <ul>
-<li>Meal logs (food items, portions, nutrition data)</li>
-<li>Food photos (compressed and stored locally)</li>
-<li>User profile (weight, goals, preferences)</li>
-<li>Streak data and progress history</li>
+<li>Meal logs (food names, portions, calories, protein, carbs, fat)</li>
+<li>Food photos (compressed JPEG, stored in local database)</li>
+<li>User profile (name, weight goals, daily targets)</li>
+<li>Subscription status &amp; credit balance (via Apple StoreKit)</li>
+<li>App preferences (language, units, reminders) via <strong>UserDefaults</strong></li>
 </ul>
 
-<h2>2. Data Sent to Third-Party AI APIs</h2>
-<p>When you take a photo of your food, the image is sent to a third-party AI service for recognition. Specifically:</p>
-<ul>
-<li><strong>Google Gemini API</strong> — receives your food photo for AI identification and nutrition estimation</li>
-<li><strong>DeepSeek API</strong> — receives your meal log text (food names and nutrition numbers, NOT photos) for generating weekly insights</li>
-<li><strong>OpenAI API</strong> (fallback only) — receives your food photo if Gemini is unavailable</li>
-</ul>
-<p><strong>Important:</strong> These AI providers process your data according to their own privacy policies. We do not control how they handle data after processing. We recommend reviewing their privacy policies:</p>
-<ul>
-<li>Google: https://policies.google.com/privacy</li>
-<li>DeepSeek: https://www.deepseek.com/privacy</li>
-<li>OpenAI: https://openai.com/privacy</li>
-</ul>
-<p>We never store your food photos on any server. Photos are sent directly from your device to the AI API and discarded after processing.</p>
+<h2>2. Data Sent to AI Providers for Food Recognition</h2>
+<p>When you photograph a meal, the image is temporarily sent to an AI service to identify food and estimate nutrition. <strong>We do not store your photos on any server.</strong></p>
 
-<h2>3. Apple Health Integration</h2>
-<p>SnapBite integrates with Apple HealthKit to:</p>
+<div class="provider-card">
+<strong>🥇 Primary — 智谱 AI (Zhipu GLM-4V-Flash)</strong>
+<div class="desc">Receives your food photo for recognition. Free tier, optimized for Chinese &amp; global cuisine.</div>
+</div>
+
+<div class="provider-card">
+<strong>🥈 Fallback — Google Gemini (2.0 Flash)</strong>
+<div class="desc">Receives your food photo only if 智谱 is unavailable.</div>
+</div>
+
+<p style="margin-top: 10px;">Photos are sent directly from your device to the AI provider's API and discarded immediately after processing. These providers process data per their own policies:</p>
 <ul>
-<li><strong>Write:</strong> Nutrition data (calories, protein, carbs, fat) for meals you log</li>
-<li><strong>Read:</strong> Your body weight (optional, to show weight trends)</li>
-</ul>
-<p>This data is stored in your Apple Health database and is under your full control. You can revoke access at any time in Settings → Privacy & Security → Health.</p>
-
-<h2>4. Photos and Camera</h2>
-<p>We request access to your camera and photo library solely to capture or select food photos for AI recognition. We do not access, upload, or store photos beyond the meal you choose to log.</p>
-
-<h2>5. Subscriptions and Payments</h2>
-<p>All payments are processed by Apple's StoreKit framework. We do not see or store your payment information. Subscription management is handled entirely through your Apple ID.</p>
-
-<h2>6. Data We Do NOT Collect</h2>
-<p>We explicitly do NOT collect:</p>
-<ul>
-<li>❌ Your name or email (unless you contact support)</li>
-<li>❌ Your location data</li>
-<li>❌ Your device identifiers for advertising</li>
-<li>❌ Your contact list</li>
-<li>❌ Usage analytics or tracking data</li>
-<li>❌ Your food photos on any server</li>
+<li>Zhipu: <a href="https://open.bigmodel.cn/privacy" style="color:#007AFF">open.bigmodel.cn/privacy</a></li>
+<li>Google: <a href="https://policies.google.com/privacy" style="color:#007AFF">policies.google.com/privacy</a></li>
 </ul>
 
-<h2>7. Children's Privacy</h2>
-<p>SnapBite does not knowingly collect any data from children under 13. The app does not require account registration or personal information.</p>
+<h2>3. AI Insights (Text Only)</h2>
+<p>Weekly/monthly nutrition insights are generated by sending your <strong>meal text data only (food names + nutrition numbers, no photos)</strong> to an AI service:</p>
+<div class="provider-card">
+<strong>💡 智谱 AI (GLM-4-Flash)</strong>
+<div class="desc">Receives aggregated meal summaries to generate personalized insights and tips.</div>
+</div>
 
-<h2>8. Data Retention</h2>
-<p>All your data is stored locally on your device. If you delete the app, all data is permanently removed. We have no backup of your data because we never have it.</p>
+<h2>4. Apple HealthKit</h2>
+<p>With your permission, SnapBiteAI integrates with Apple Health:</p>
+<ul>
+<li><strong>Writes:</strong> Calories, protein, carbs, fat for each logged meal</li>
+<li><strong>Reads:</strong> Body weight (optional, for trend charts)</li>
+</ul>
+<p>All Health data remains in Apple Health under your control. Revoke anytime in Settings → Privacy &amp; Security → Health.</p>
 
-<h2>9. Your Rights</h2>
-<p>Since we don't collect your data, you have full control:</p>
+<h2>5. Camera &amp; Photo Library</h2>
+<p>Camera access is used to photograph meals. Photo library access lets you select existing images. <strong>We never access, upload, or store photos beyond the single image you choose to analyze.</strong></p>
+
+<h2>6. Payments</h2>
+<p>All purchases (subscriptions, credit packs, lifetime) are processed by <strong>Apple StoreKit</strong>. We never see or store your payment details.</p>
+
+<h2>7. What We Do NOT Collect</h2>
+<div class="do-not">
+<ul>
+<li>❌ Name, email, phone number, or any personal identity</li>
+<li>❌ Location or GPS data</li>
+<li>❌ Device advertising identifiers (IDFA)</li>
+<li>❌ Third-party analytics or tracking SDKs</li>
+<li>❌ Advertising networks</li>
+<li>❌ Contact list or social profiles</li>
+</ul>
+</div>
+
+<h2>8. Children</h2>
+<p>SnapBiteAI does not knowingly collect data from children under 13. No account registration or personal information is required.</p>
+
+<h2>9. Data Retention &amp; Deletion</h2>
+<ul>
+<li>All data is stored locally on your device</li>
+<li>Delete the app → all data is permanently removed</li>
+<li>We have no backup of your data because we never receive it</li>
+</ul>
+
+<h2>10. Your Rights</h2>
 <ul>
 <li>Delete the app to remove all local data</li>
-<li>Revoke HealthKit access in Settings</li>
-<li>Revoke Camera/Photo access in Settings</li>
-<li>Cancel subscriptions in your Apple ID settings</li>
+<li>Revoke camera/photo/Health permissions in iOS Settings anytime</li>
+<li>Manage or cancel subscriptions via Apple ID → Subscriptions</li>
+<li>Export your data by contacting us below</li>
 </ul>
 
-<h2>10. Open Source</h2>
-<p>SnapBite is built with open standards and Apple frameworks. We use no third-party analytics, no advertising SDKs, and no tracking libraries.</p>
+<h2>11. Changes</h2>
+<p>We may update this policy occasionally. Changes will be reflected here with a new date. Continued use after updates means you accept the changes.</p>
 
-<h2>11. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the new policy.</p>
-
-<h2>12. Contact Us</h2>
-<p>If you have questions about this Privacy Policy or the app, please contact:</p>
-<p>Email: niuniugede@gmail.com<br>
-
+<h2>12. Contact</h2>
+<p>Questions? Reach us at: <a href="mailto:niuniugede@gmail.com" style="color:#007AFF">niuniugede@gmail.com</a><br>
 <div class="footer">
-<p>SnapBite — Snap. Track. Achieve.</p>
-<p>© 2026 SnapBite. All rights reserved.</p>
+<p>SnapBiteAI — Snap. Track. Achieve.</p>
+<p>© 2026 SnapBiteAI. All rights reserved.</p>
 </div>
+
 </div>
 </body>
 </html>
