@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SnapBiteAI — 隐私政策</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'SF Pro Text', 'PingFang SC', 'Helvetica Neue', sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
+.container { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; color: #00C896; }
+h2 { font-size: 18px; font-weight: 700; margin: 24px 0 10px; color: #1d1d1f; }
+p, li { font-size: 15px; color: #424245; }
+ul { padding-left: 20px; margin-bottom: 12px; }
+li { margin-bottom: 6px; }
+.header { text-align: center; padding: 40px 0 32px; }
+.header .logo { font-size: 48px; margin-bottom: 12px; }
+.badge { display: inline-block; background: #E0F7F1; color: #00A878; padding: 4px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; }
+.updated { color: #86868b; font-size: 13px; margin-top: 8px; }
+.footer { text-align: center; padding: 32px 0 0; color: #86868b; font-size: 13px; border-top: 1px solid #e5e5e5; margin-top: 40px; }
+.provider-card { background: #fff; border-radius: 12px; padding: 14px 16px; margin: 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.provider-card strong { color: #1d1d1f; }
+.provider-card .desc { font-size: 13px; color: #86868b; margin-top: 2px; }
+.do-not { background: #E0F7F1; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+.do-not li { color: #006B4A; font-size: 14px; }
+a { color: #007AFF; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>SnapBiteAI 隐私政策</h1>
+<p class="updated">最后更新：2026年8月</p>
+</div>
+
+<p>SnapBiteAI（"我们"）致力于透明地说明您的数据如何被处理。本政策适用于我们的 iOS 应用。</p>
+
+<h2>🔒 核心原则</h2>
+<p><strong>您的数据保存在您的设备上。</strong>我们不运行任何服务器。您的餐食记录、照片和健康数据使用 Apple SwiftData 框架本地存储，永远不会上传给我们。</p>
+
+<h2>1. 存储在您设备上的数据</h2>
+<p>以下数据仅存储在您的 iPhone 上：</p>
+<ul>
+<li>餐食记录（食物名称、份量、热量、蛋白质、碳水、脂肪）</li>
+<li>食物照片（JPEG 压缩格式，存储在本地数据库中）</li>
+<li>用户档案（姓名、体重目标、每日目标）</li>
+<li>订阅状态和点数余额（通过 Apple StoreKit）</li>
+<li>应用偏好设置（语言、单位、提醒）通过 <strong>UserDefaults</strong></li>
+</ul>
+
+<h2>2. 发送给 AI 提供商进行食物识别的数据</h2>
+<p>当您拍摄餐食照片时，图片会临时发送给 AI 服务以识别食物和估算营养。<strong>我们不在任何服务器上存储您的照片。</strong></p>
+
+<div class="provider-card">
+<strong>🥇 主要 — 智谱 AI (Zhipu GLM-4V-Flash)</strong>
+<div class="desc">接收您的食物照片进行识别。免费套餐，对中餐和全球美食有出色表现。</div>
+</div>
+
+<div class="provider-card">
+<strong>🥈 备用 — Google Gemini (2.0 Flash)</strong>
+<div class="desc">仅在智谱不可用时接收您的食物照片。</div>
+</div>
+
+<p style="margin-top: 10px;">照片直接从您的设备发送到 AI 提供商的 API，处理后立即丢弃。这些提供商按其自身政策处理数据：</p>
+<ul>
+<li>智谱：<a href="https://open.bigmodel.cn/privacy">open.bigmodel.cn/privacy</a></li>
+<li>Google：<a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+</ul>
+
+<h2>3. AI 洞察（仅文本）</h2>
+<p>每周/每月的营养洞察通过将您的<strong>餐食文本数据（食物名称 + 营养数字，无照片）</strong>发送给 AI 服务生成：</p>
+<div class="provider-card">
+<strong>💡 智谱 AI (GLM-4-Flash)</strong>
+<div class="desc">接收汇总的餐食摘要以生成个性化洞察和建议。</div>
+</div>
+
+<h2>4. Apple HealthKit</h2>
+<p>经您许可后，SnapBiteAI 会与 Apple Health 集成：</p>
+<ul>
+<li><strong>写入：</strong>每餐记录的热量、蛋白质、碳水、脂肪</li>
+<li><strong>读取：</strong>体重（可选，用于趋势图表）</li>
+</ul>
+<p>所有 Health 数据保留在 Apple Health 中，由您完全控制。随时可在 设置 → 隐私与安全性 → 健康 中撤销权限。</p>
+
+<h2>5. 相机与相册</h2>
+<p>相机权限用于拍摄餐食照片。相册权限让您选择已有图片。<strong>除您选择分析的单个图片外，我们绝不访问、上传或存储任何照片。</strong></p>
+
+<h2>6. 支付</h2>
+<p>所有购买（订阅、点数包、终身版）由 <strong>Apple StoreKit</strong> 处理。我们不会看到或存储您的支付详情。</p>
+
+<h2>7. 我们不收集的信息</h2>
+<div class="do-not">
+<ul>
+<li>❌ 姓名、邮箱、手机号或任何个人身份信息</li>
+<li>❌ 位置或 GPS 数据</li>
+<li>❌ 设备广告标识符 (IDFA)</li>
+<li>❌ 第三方分析或追踪 SDK</li>
+<li>❌ 广告网络</li>
+<li>❌ 联系人列表或社交档案</li>
+</ul>
+</div>
+
+<h2>8. 儿童</h2>
+<p>SnapBiteAI 不会有意收集 13 岁以下儿童的数据。无需账户注册或个人信息。</p>
+
+<h2>9. 数据保留与删除</h2>
+<ul>
+<li>所有数据存储在您的设备本地</li>
+<li>删除应用 → 所有数据永久移除</li>
+<li>我们没有您的数据备份，因为我们从未接收过</li>
+</ul>
+
+<h2>10. 您的权利</h2>
+<ul>
+<li>删除应用即可移除所有本地数据</li>
+<li>随时在 iOS 设置中撤销相机/照片/健康权限</li>
+<li>通过 Apple ID → 订阅 管理或取消订阅</li>
+<li>通过下方联系方式联系我们导出您的数据</li>
+</ul>
+
+<h2>11. 变更</h2>
+<p>我们可能不时更新本政策。变更将在此处显示新日期。更新后继续使用表示您接受变更。</p>
+
+<h2>12. 联系我们</h2>
+<p>如有问题，请发送邮件至：<a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></p>
+
+<div class="footer">
+<p>SnapBiteAI — 拍照 · 追踪 · 达成</p>
+<p>© 2026 SnapBiteAI. 保留所有权利。</p>
+</div>
+
+</div>
+</body>
+</html>
