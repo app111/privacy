@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 · 免费小说 (FreeNovel)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Songti SC", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #F5F5F7;
+    color: #1D1D1F;
+    line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  header {
+    background: linear-gradient(135deg, #6366F1 0%, #EC4899 100%);
+    color: white;
+    padding: 32px 28px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  header p { font-size: 14px; opacity: 0.92; }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #6366F1;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F0F0F5;
+  }
+  .card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+    color: #374151;
+  }
+  .card p, .card li { font-size: 14.5px; color: #4B5563; margin-bottom: 8px; }
+  .card ul { padding-left: 20px; margin: 8px 0; }
+  .check-list { list-style: none; padding-left: 0; }
+  .check-list li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+  }
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 20px; height: 20px;
+    background: #10B981;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .cross-list li::before {
+    content: "✕";
+    background: #EF4444;
+  }
+  .warn-box {
+    background: #FEF3C7;
+    border-left: 4px solid #F59E0B;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 12px 0;
+  }
+  .warn-box p { color: #92400E; font-size: 13.5px; margin: 0; }
+  .info-box {
+    background: #EFF6FF;
+    border-left: 4px solid #3B82F6;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 12px 0;
+  }
+  .info-box p { color: #1E40AF; font-size: 13.5px; margin: 0; }
+  .en { font-family: "Georgia", serif; }
+  .small { font-size: 12.5px; color: #9CA3AF; margin-top: 16px; }
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .lang-btn {
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #4B5563;
+  }
+  .lang-btn.active {
+    background: #6366F1;
+    color: white;
+    border-color: #6366F1;
+  }
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+  footer {
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 12px;
+    margin-top: 28px;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLang('zh')">🇨🇳 中文</button>
+    <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+  </div>
+
+  <header>
+    <h1>🛡️ 隐私政策</h1>
+    <p>免费小说 · FreeNovel · v1.2 · 最后更新：2026 年 8 月 14 日</p>
+  </header>
+
+  <!-- ===== 中文 ===== -->
+  <div id="zh" class="lang-section active">
+
+    <div class="card">
+      <h2>📌 一句话总结</h2>
+      <p><strong>我们不收集你的任何个人身份信息。</strong>阅读数据只存储在你的设备中。使用 AI 功能时，章节文本会发送至智谱 GLM 服务器生成分析结果，但不关联任何个人身份。</p>
+    </div>
+
+    <div class="card">
+      <h2>1. 我们收集哪些信息？</h2>
+      <h3>❌ 不收集的信息</h3>
+      <ul class="check-list cross-list">
+        <li>不收集姓名、手机号、邮箱、身份证等个人身份信息</li>
+        <li>不要求注册账号，不提供登录功能</li>
+        <li>不收集设备 IDFA、IDFV、MAC 地址、精确地理位置</li>
+        <li>不嵌入任何第三方统计 SDK（如友盟、Google Analytics、Firebase、Adjust 等）</li>
+        <li>不嵌入任何广告 SDK（穿山甲、AdMob、GDT 等）</li>
+        <li>不追踪你的阅读行为、不建立用户画像</li>
+        <li>不上传你导入的本地书籍（TXT/EPUB/PDF）到任何服务器</li>
+      </ul>
+
+      <h3>📱 仅在设备本地存储的数据（不离开你的手机）</h3>
+      <ul class="check-list">
+        <li><strong>书籍元数据</strong>：书名、作者、文件大小、导入时间（存入本机 SwiftData）</li>
+        <li><strong>阅读进度</strong>：当前章回、页码、滚动位置（存入本机 SwiftData）</li>
+        <li><strong>书签与笔记</strong>：你添加的书签、划线、5 色高亮、文字笔记（存入本机 SwiftData）</li>
+        <li><strong>阅读偏好</strong>：主题、字号、行距、翻页方式（存入 UserDefaults）</li>
+        <li><strong>本地书籍文件</strong>：通过 WiFi / 分享 / iTunes 导入的电子书，存在 App 沙盒 Documents 目录</li>
+        <li><strong>AI 免费额度计数</strong>：每日已使用次数（存入 UserDefaults，自然日重置）</li>
+      </ul>
+      <p class="small">* 你可以在 iOS「设置 → 通用 → iPhone 存储空间 → 免费小说 → 删除 App」来一次性删除所有本地数据。</p>
+    </div>
+
+    <div class="card">
+      <h2>2. AI 智能功能的数据处理</h2>
+      <div class="info-box">
+        <p>ℹ️ 本应用内置 AI 智能导读功能（章节导读、人物分析、词义释义、AI 翻译），由<strong>智谱 GLM</strong>（open.bigmodel.cn）提供技术支持。</p>
+      </div>
+      <h3>📤 使用 AI 功能时，什么数据会被发送？</h3>
+      <ul>
+        <li><strong>章节文本内容</strong>：你当前阅读的章节正文（截取前 8000 字），用于生成导读、人物分析或翻译</li>
+        <li><strong>书名与章节标题</strong>：用于 AI 理解上下文（如"红楼梦 · 第十四回"）</li>
+        <li><strong>选中的文字</strong>：使用"词义释义"时，你选中的具体文字及其上下文</li>
+      </ul>
+      <h3>🔒 数据如何被处理？</h3>
+      <ul class="check-list">
+        <li>数据通过 HTTPS 加密传输至智谱 GLM 服务器（open.bigmodel.cn）</li>
+        <li>请求中<strong>不包含</strong>任何个人身份信息（无用户 ID、无设备 ID、无账号）</li>
+        <li>AI 生成的结果返回后显示给你，同时缓存在本机内存中（重启 App 后清除）</li>
+        <li>我们使用的 GLM-4-Flash 模型不保留用户输入数据用于训练</li>
+      </ul>
+      <div class="warn-box">
+        <p>⚠️ <strong>请注意</strong>：使用 AI 功能时，章节文本会经过智谱 GLM 服务器处理。如果你不希望任何文本离开设备，请不要使用 AI 导读功能，基础的阅读、书签、笔记功能完全离线，不受影响。</p>
+      </div>
+      <p>智谱 GLM 的隐私政策请见：<a href="https://open.bigmodel.cn/user/privacy" target="_blank">open.bigmodel.cn/user/privacy</a></p>
+    </div>
+
+    <div class="card">
+      <h2>3. WiFi 传书功能如何工作？</h2>
+      <p>当你开启「WiFi 传书」时，App 会在你的手机上启动一个<strong>仅局域网可访问</strong>的 HTTP 服务器（端口 8888）。</p>
+      <ul class="check-list">
+        <li>🔒 该服务器只监听同一 Wi-Fi 下的连接，不会暴露到公网</li>
+        <li>📤 你上传的书籍文件直接写入 App 沙盒，不经过任何中间服务器</li>
+        <li>🚪 关闭页面或退出 App 后，服务器立即停止，不会后台常驻</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. 公版书城的网络请求</h2>
+      <p>「公版书城」展示的书籍元数据（书名、作者、分类、封面）已随 App 安装包一起打包（books.json）。</p>
+      <ul>
+        <li>点击「下载」时，App 会直接从 <strong>Project Gutenberg 官方服务器</strong>（gutenberg.org / aleph.gutenberg.org）下载公版书籍文件（EPUB / TXT）。</li>
+        <li>此过程为标准 HTTP/HTTPS 请求，不携带任何用户标识。Gutenberg 的隐私政策请见：<a href="https://www.gutenberg.org/policy/privacy.html" target="_blank">gutenberg.org/policy/privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5. 应用内购买（IAP）数据处理</h2>
+      <p>本应用提供「AI 会员」订阅服务（月度 / 年度 / 终身），通过 Apple StoreKit 2 框架完成购买。</p>
+      <ul class="check-list">
+        <li>所有购买交易由 <strong>Apple App Store</strong> 处理，我们不经手任何支付信息</li>
+        <li>订阅状态通过 StoreKit 2 的签名验证机制读取，仅用于解锁 AI 功能</li>
+        <li>我们不收集、不存储任何信用卡、支付账户信息</li>
+        <li>购买记录由 Apple 管理，可在「设置 → Apple ID → 订阅」中查看/取消</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. 儿童隐私</h2>
+      <p>本 App 不面向 13 岁以下儿童设计，也不会故意收集 13 岁以下儿童的任何信息。由于我们不收集任何个人身份信息，因此不存在儿童数据泄露风险。</p>
+    </div>
+
+    <div class="card">
+      <h2>7. 你的权利</h2>
+      <p>依据 GDPR、CCPA、《个人信息保护法》等法规，你享有：</p>
+      <ul class="check-list">
+        <li>知情权 —— 你正在阅读的就是</li>
+        <li>访问权 / 可携带权 —— 所有本地数据可随时通过 iTunes 或 Finder 导出 App Documents 目录</li>
+        <li>删除权 —— 删除 App 即删除全部本地数据</li>
+        <li>拒绝权 —— 不使用 AI 功能即可避免任何数据传输；基础阅读功能完全离线</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>8. 政策变更</h2>
+      <p>如果未来有隐私政策变更，我们会：</p>
+      <ul>
+        <li>在 App 内显著弹窗告知，并重新获得你的同意</li>
+        <li>更新本页顶部的「最后更新」日期</li>
+        <li>在新版本 App Store 描述中注明</li>
+      </ul>
+      <p>本政策不会有任何悄悄变更。</p>
+    </div>
+
+    <div class="card">
+      <h2>9. 联系我们</h2>
+      <p>如有任何隐私相关问题，请通过以下方式联系：</p>
+      <ul>
+        <li>📧 邮箱：<strong>niuniugede@gmail.com</strong></li>
+        <li>⏰ 承诺回复时间：工作日 48 小时内</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 英文 ===== -->
+  <div id="en" class="lang-section">
+
+    <div class="card">
+      <h2>📌 TL;DR</h2>
+      <p><strong>We don't collect any personally identifiable information.</strong> Reading data lives <em>only</em> on your device. When using AI features, chapter text is sent to Zhipu GLM servers for processing — but is never linked to your identity.</p>
+    </div>
+
+    <div class="card">
+      <h2>1. What We Collect</h2>
+      <h3>❌ Things we NEVER collect</h3>
+      <ul class="check-list cross-list">
+        <li>No name, phone, email, or government ID</li>
+        <li>No account system — no sign-up, no login</li>
+        <li>No IDFA, IDFV, MAC address, or precise geolocation</li>
+        <li>No third-party analytics SDKs (no Umeng, Google Analytics, Firebase, Adjust…)</li>
+        <li>No ad SDKs (no Pangle, AdMob, Tencent Ads…)</li>
+        <li>No reading-behavior tracking, no user profiling</li>
+        <li>Your locally imported books (TXT / EPUB / PDF) are <em>never</em> uploaded anywhere</li>
+      </ul>
+
+      <h3>📱 Data stored locally on your device only</h3>
+      <ul class="check-list">
+        <li><strong>Book metadata</strong> — title, author, file size, import date (SwiftData)</li>
+        <li><strong>Reading progress</strong> — current chapter, page, scroll position (SwiftData)</li>
+        <li><strong>Bookmarks & notes</strong> — bookmarks, highlights in 5 colors, inline notes (SwiftData)</li>
+        <li><strong>Reader preferences</strong> — theme, font size, line height, page-turn style (UserDefaults)</li>
+        <li><strong>Book files</strong> — imported e-books live in the App's sandbox Documents folder</li>
+        <li><strong>AI free quota counter</strong> — daily usage count (UserDefaults, resets each calendar day)</li>
+      </ul>
+      <p class="small">* To wipe everything: iOS Settings → General → iPhone Storage → FreeNovel → Delete App.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. AI Feature Data Processing</h2>
+      <div class="info-box">
+        <p>ℹ️ This app includes AI-powered features (chapter guide, character analysis, word explanation, translation) powered by <strong>Zhipu GLM</strong> (open.bigmodel.cn).</p>
+      </div>
+      <h3>📤 What data is sent when using AI features?</h3>
+      <ul>
+        <li><strong>Chapter text content</strong> — the text of your current chapter (first 8,000 characters), used to generate guides, analysis, or translations</li>
+        <li><strong>Book title & chapter title</strong> — for AI context understanding (e.g., "Dream of the Red Chamber · Chapter 14")</li>
+        <li><strong>Selected text</strong> — when using "Word Explanation," the specific text you selected and its surrounding context</li>
+      </ul>
+      <h3>🔒 How is the data handled?</h3>
+      <ul class="check-list">
+        <li>Data is transmitted via HTTPS to Zhipu GLM servers (open.bigmodel.cn)</li>
+        <li>Requests contain <strong>no personally identifiable information</strong> (no user ID, no device ID, no account)</li>
+        <li>AI results are returned and displayed to you, cached in device memory only (cleared on app restart)</li>
+        <li>The GLM-4-Flash model does not retain user input data for training</li>
+      </ul>
+      <div class="warn-box">
+        <p>⚠️ <strong>Please note</strong>: When using AI features, chapter text is processed by Zhipu GLM servers. If you prefer no text to leave your device, simply avoid the AI guide features — core reading, bookmarks, and notes work fully offline.</p>
+      </div>
+      <p>Zhipu GLM privacy policy: <a href="https://open.bigmodel.cn/user/privacy" target="_blank">open.bigmodel.cn/user/privacy</a></p>
+    </div>
+
+    <div class="card">
+      <h2>3. How WiFi Transfer Works</h2>
+      <p>When you turn on "WiFi Transfer", the App starts a <strong>local-network-only</strong> HTTP server on your phone (port 8888).</p>
+      <ul class="check-list">
+        <li>🔒 Accessible only on the same Wi-Fi — never exposed to the public internet</li>
+        <li>📤 Uploaded books go straight into the App sandbox — no intermediate servers</li>
+        <li>🚪 Server stops immediately when you close the page or quit the App</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Public Domain Store Requests</h2>
+      <p>Book metadata in the Store is bundled with the App (books.json) — no network fetch needed to browse.</p>
+      <ul>
+        <li>When you tap "Download", the App directly fetches the EPUB / TXT from <strong>Project Gutenberg's official servers</strong> (gutenberg.org / aleph.gutenberg.org).</li>
+        <li>Standard HTTPS only, no user-identifier headers. See Gutenberg's privacy policy at <a href="https://www.gutenberg.org/policy/privacy.html" target="_blank">gutenberg.org/policy/privacy</a>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5. In-App Purchase Data</h2>
+      <p>This app offers an "AI Premium" subscription (Monthly / Yearly / Lifetime) via Apple StoreKit 2.</p>
+      <ul class="check-list">
+        <li>All purchases are processed by the <strong>Apple App Store</strong> — we never handle payment information</li>
+        <li>Subscription status is read via StoreKit 2's signed verification, used only to unlock AI features</li>
+        <li>We do not collect or store any credit card or payment account information</li>
+        <li>Purchase records are managed by Apple — view/cancel at Settings → Apple ID → Subscriptions</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. Children's Privacy</h2>
+      <p>This App is not directed at children under 13 and we do not knowingly collect any personal information from children under 13. Since we collect no personally identifiable information, no children's data can be leaked.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Your Rights (GDPR / CCPA / PIPL)</h2>
+      <ul class="check-list">
+        <li>Right to be informed — you're reading it now</li>
+        <li>Right of access / portability — everything is on your device; export via iTunes / Finder → File Sharing</li>
+        <li>Right to erasure — delete the App = delete all local data</li>
+        <li>Right to opt out — avoid AI features to prevent any data transmission; core reading works fully offline</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>8. Policy Changes</h2>
+      <p>If we ever change this policy, we will:</p>
+      <ul>
+        <li>Show you a prominent in-app dialog and re-request consent</li>
+        <li>Update the "Last Updated" date at the top</li>
+        <li>Mention the change in the App Store release notes</li>
+      </ul>
+      <p>No silent changes. Ever.</p>
+    </div>
+
+    <div class="card">
+      <h2>9. Contact</h2>
+      <p>For privacy-related inquiries:</p>
+      <ul>
+        <li>📧 Email: <strong>niuniugede@gmail.com</strong></li>
+        <li>⏰ Response within 48 hours on business days</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Sagitar. 免费小说 · FreeNovel. 本页最后更新：2026-08-14</p>
+  </footer>
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
