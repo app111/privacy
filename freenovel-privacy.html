@@ -388,8 +388,39 @@
     document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
     document.getElementById(lang).classList.add('active');
-    event.target.classList.add('active');
+    document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
   }
+
+  // 首次访问时根据浏览器语言自动切换
+  (function() {
+    // 检查是否已存储过用户选择
+    var savedLang = localStorage.getItem('freenovel-privacy-lang');
+    
+    if (!savedLang) {
+      // 获取浏览器语言
+      var browserLang = navigator.language || navigator.userLanguage || 'zh';
+      // 判断是否为中文（简体/繁体）或英文
+      if (browserLang.startsWith('zh')) {
+        savedLang = 'zh';
+      } else {
+        savedLang = 'en';
+      }
+    }
+    
+    // 如果当前显示的不是目标语言，则切换
+    var currentActive = document.querySelector('.lang-section.active');
+    if (currentActive && currentActive.id !== savedLang) {
+      switchLang(savedLang);
+    }
+    
+    // 存储用户选择（可选：如果用户手动切换，也记录下来）
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lang = this.getAttribute('onclick').match(/'(\w+)'/)[1];
+        localStorage.setItem('freenovel-privacy-lang', lang);
+      });
+    });
+  })();
 </script>
 </body>
 </html>
