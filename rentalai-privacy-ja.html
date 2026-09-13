@@ -1,41 +1,365 @@
-# プライバシーポリシー(賃貸AI)
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー(賃貸AI)</title>
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --text: #1f2937;
+    --text-muted: #6b7280;
+    --bg: #f3f6fb;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --accent-bg: #eff6ff;
+    --warn-bg: #fffbeb;
+    --warn-border: #f59e0b;
+    --warn-text: #92400e;
+  }
 
-最終更新日: 2026年9月13日
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-株式会社/個人名(※運営者名に差し替えてください)(以下「当社」)は、iOSアプリ「賃貸AI」(以下「本アプリ」)におけるユーザーの個人情報の取り扱いを以下のとおり定めます。
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", Meiryo, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 2;
+    -webkit-font-smoothing: antialiased;
+  }
 
-## 1. データの取り扱い
-本アプリで解析した契約書の画像・テキスト、および解析結果(物件名・金額・リスク情報など)は、端末内(本アプリの保存領域)にのみ保存されます。当社のサーバーおよび第三者に自動的に送信・保存されることはありません。
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-## 2. AI処理について
-書類の解析とAIチャットには、Apple Intelligence の端内モデル(Foundation Models)を使用します。処理は端末内で完結し、契約書の画像・テキスト、質問内容、解析結果が端末の外へ送信されることはありません。
+  /* ---------- ヘッダー ---------- */
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #3b82f6 100%);
+    color: #fff;
+    padding: 56px 0 44px;
+    text-align: center;
+  }
 
-非対応の端末・OS の場合は、端末内蔵のサンプルデータ(デモ)を表示します。設定画面「アプリについて」で現在の動作モードを確認できます。
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, .16);
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 999px;
+    padding: 4px 16px;
+    margin-bottom: 18px;
+  }
 
-## 3. カメラ・写真・ファイルへのアクセス
-- カメラ: 契約書を撮影して解析するためにのみ使用します。
-- 写真ライブラリ: 解析対象の書類写真を選択するためにのみ使用します。
-- ファイル: PDF書類を選択するためにのみ使用します。
-取得した画像・ファイルをユーザーの意図なく共有・送信することはありません。
+  .hero h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin-bottom: 8px;
+  }
 
-## 4. 収集しない情報
-当社は以下を行いません。
-- ユーザーの個人を特定できる情報の収集・送信
-- 広告識別子(IDFA)の取得とターゲティング広告への利用
-- 位置情報・連絡先・健康情報へのアクセス
-- 第三者へのデータ販売
+  .hero-app {
+    font-size: 16px;
+    opacity: .92;
+    margin-bottom: 20px;
+  }
 
-## 5. データの削除
-アプリを削除すると、端末内に保存されたすべての分析履歴・比較履歴は削除されます。また「設定 > すべてのデータを削除」からいつでも削除できます。
+  .hero-app strong {
+    font-weight: 700;
+  }
 
-## 6. 子どもについて
-本アプリは13歳未満の子どもを対象としておらず、意図的に子どもの個人情報を収集しません。
+  .updated-chip {
+    display: inline-block;
+    font-size: 13px;
+    background: rgba(255, 255, 255, .92);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    padding: 6px 20px;
+    font-weight: 600;
+  }
 
-## 7. 免責事項
-本アプリの解析結果は概算・参考情報です。賃貸契約の判断は、必ず契約書原文・重要事項説明書および不動産会社・専門家への確認に基づいて行ってください。解析結果に基づく判断により生じた損害について、当社は責任を負いません。
+  /* ---------- 導入文 ---------- */
+  .intro {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, .05);
+    padding: 24px 28px;
+    margin: -22px auto 24px;
+    position: relative;
+    font-size: 14.5px;
+  }
 
-## 8. お問い合わせ
-本ポリシーに関するお問い合わせ: (※サポート用メールアドレスに差し替えてください)
+  /* ---------- セクション ---------- */
+  main .container {
+    padding-bottom: 8px;
+  }
 
-## 9. 改定
-本ポリシーは必要に応じて改定されます。重要な変更はアプリ内および本ページでお知らせします。
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, .05);
+    padding: 26px 28px;
+    margin-bottom: 22px;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h2 .num {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  section p {
+    margin-bottom: 10px;
+  }
+
+  section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- リスト ---------- */
+  ul.styled {
+    list-style: none;
+    margin: 6px 0 12px;
+  }
+
+  ul.styled li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+  }
+
+  ul.styled li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: .85em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  ul.deny li::before {
+    content: "✕";
+    width: auto;
+    height: auto;
+    top: .35em;
+    background: none;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* ---------- 強調ボックス ---------- */
+  .point-box {
+    background: var(--accent-bg);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 18px;
+    margin: 12px 0;
+    font-size: 14.5px;
+  }
+
+  .point-box strong {
+    color: var(--primary-dark);
+  }
+
+  .warn-box {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 18px;
+    margin: 12px 0;
+    font-size: 14.5px;
+    color: var(--warn-text);
+  }
+
+  /* ---------- 置き換えプレースホルダー ---------- */
+  .placeholder {
+    background: #fef3c7;
+    color: var(--warn-text);
+    border-bottom: 1px dashed #d97706;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-weight: 600;
+  }
+
+  /* ---------- フッター ---------- */
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    padding: 28px 20px 40px;
+  }
+
+  footer .app-name {
+    font-weight: 700;
+    color: #374151;
+  }
+
+  /* ---------- レスポンシブ ---------- */
+  @media (max-width: 600px) {
+    .hero {
+      padding: 40px 0 34px;
+    }
+    .hero h1 {
+      font-size: 24px;
+    }
+    .intro,
+    section {
+      padding: 20px 18px;
+    }
+    h2 {
+      font-size: 16.5px;
+    }
+    body {
+      font-size: 14.5px;
+    }
+  }
+
+  /* ---------- 印刷 ---------- */
+  @media print {
+    body {
+      background: #fff;
+    }
+    .hero {
+      background: #fff;
+      color: #111;
+      border-bottom: 2px solid var(--primary);
+      padding: 24px 0;
+    }
+    .hero-eyebrow {
+      background: none;
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+    .updated-chip {
+      background: #f3f6fb;
+    }
+    .intro,
+    section {
+      box-shadow: none;
+      border: 1px solid var(--border);
+      break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Privacy Policy</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="hero-app">iOSアプリ <strong>「賃貸AI」</strong></p>
+    <p class="updated-chip">最終更新日: 2026年9月13日</p>
+  </div>
+</header>
+
+<div class="intro">
+  <p>株式会社/個人名<span class="placeholder">(※運営者名に差し替えてください)</span>(以下「当社」)は、iOSアプリ「賃貸AI」(以下「本アプリ」)におけるユーザーの個人情報の取り扱いを以下のとおり定めます。</p>
+</div>
+
+<main>
+  <div class="container">
+
+    <section>
+      <h2><span class="num">1</span>データの取り扱い</h2>
+      <p>本アプリで解析した契約書の画像・テキスト、および解析結果(物件名・金額・リスク情報など)は、<strong>端末内(本アプリの保存領域)にのみ保存されます</strong>。</p>
+      <div class="point-box">当社のサーバーおよび第三者に<strong>自動的に送信・保存されることはありません</strong>。</div>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>AI処理について</h2>
+      <p>書類の解析とAIチャットには、Apple Intelligence の端内モデル(Foundation Models)を使用します。</p>
+      <div class="point-box">処理は<strong>端末内で完結</strong>し、契約書の画像・テキスト、質問内容、解析結果が<strong>端末の外へ送信されることはありません</strong>。</div>
+      <p>非対応の端末・OS の場合は、端末内蔵のサンプルデータ(デモ)を表示します。設定画面「アプリについて」で現在の動作モードを確認できます。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>カメラ・写真・ファイルへのアクセス</h2>
+      <ul class="styled">
+        <li><strong>カメラ:</strong> 契約書を撮影して解析するためにのみ使用します。</li>
+        <li><strong>写真ライブラリ:</strong> 解析対象の書類写真を選択するためにのみ使用します。</li>
+        <li><strong>ファイル:</strong> PDF書類を選択するためにのみ使用します。</li>
+      </ul>
+      <p>取得した画像・ファイルをユーザーの意図なく共有・送信することはありません。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span>収集しない情報</h2>
+      <p>当社は以下を行いません。</p>
+      <ul class="styled deny">
+        <li>ユーザーの個人を特定できる情報の収集・送信</li>
+        <li>広告識別子(IDFA)の取得とターゲティング広告への利用</li>
+        <li>位置情報・連絡先・健康情報へのアクセス</li>
+        <li>第三者へのデータ販売</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span>データの削除</h2>
+      <p>アプリを削除すると、端末内に保存されたすべての分析履歴・比較履歴は削除されます。また<strong>「設定 &gt; すべてのデータを削除」</strong>からいつでも削除できます。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span>子どもについて</h2>
+      <p>本アプリは13歳未満の子どもを対象としておらず、意図的に子どもの個人情報を収集しません。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">7</span>免責事項</h2>
+      <div class="warn-box">本アプリの解析結果は<strong>概算・参考情報</strong>です。賃貸契約の判断は、必ず契約書原文・重要事項説明書および不動産会社・専門家への確認に基づいて行ってください。</div>
+      <p>解析結果に基づく判断により生じた損害について、当社は責任を負いません。</p>
+    </section>
+
+    <section>
+      <h2><span class="num">8</span>お問い合わせ</h2>
+      <p>本ポリシーに関するお問い合わせ: <span class="placeholder">(※サポート用メールアドレスに差し替えてください)</span></p>
+    </section>
+
+    <section>
+      <h2><span class="num">9</span>改定</h2>
+      <p>本ポリシーは必要に応じて改定されます。重要な変更はアプリ内および本ページでお知らせします。</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <p><span class="app-name">賃貸AI</span> プライバシーポリシー</p>
+</footer>
+
+</body>
+</html>
