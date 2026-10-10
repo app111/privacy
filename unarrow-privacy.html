@@ -5,7 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unarrow — Privacy Policy</title>
 <meta name="description" content="What Unarrow stores, what leaves your device, and how to delete it.">
-<link rel="stylesheet" href="style.css">
+<style>
+:root { --page:#f4f5f8; --card:#fff; --text:#17181c; --muted:#6b6f7d; --line:#e9eaf0; --accent:#4a5ae0; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--page); color:var(--text);
+  font:16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing:antialiased; }
+.wrap { max-width:44rem; margin:0 auto; padding:56px 20px 80px; }
+.eyebrow { font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 6px; }
+h1 { font-size:30px; line-height:1.2; letter-spacing:-.02em; margin:0 0 12px; }
+.lede { font-size:17px; color:var(--muted); margin:0 0 32px; }
+.card { background:var(--card); border-radius:20px; padding:28px 26px; box-shadow:0 8px 24px rgba(30,34,50,.06); margin-bottom:20px; }
+h2 { font-size:18px; letter-spacing:-.01em; margin:28px 0 8px; }
+.card h2:first-child { margin-top:0; }
+p { margin:0 0 12px; } p:last-child { margin-bottom:0; }
+ul { margin:0 0 12px; padding-left:20px; } li { margin-bottom:6px; }
+a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+.terms { font-weight:700; } .note { font-size:14px; color:var(--muted); }
+.disclaimer { border-left:3px solid var(--line); padding-left:14px; font-size:15px; color:var(--muted); }
+footer { font-size:13px; color:var(--muted); margin-top:28px; }
+@media print { body { background:#fff; } .card { box-shadow:none; border:1px solid var(--line); } }
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -17,7 +37,7 @@
     <h2>1. Nothing leaves your device</h2>
     <p>Version 1.0 has <strong>no server</strong>. The app makes no network requests, so no data about you or your play is uploaded, and there is no copy of your progress anywhere we could look at — we have no way to look.</p>
     <p>Specifically, Unarrow contains no analytics SDK, no advertising SDK, no third-party tracker and no crash reporter of its own, and it never asks for the advertising identifier or permission to track. You can turn your networking off entirely and the app behaves the same.</p>
-    <p class="note">One thing we do not control: if you have <span class="term">iOS Settings › Privacy &amp; Security › Analytics &amp; Improvements › iPhone Analytics</span> turned on with sharing enabled, iOS itself may send us a crash report when the app quits unexpectedly. Those reports come from the operating system, not from code in the app, and contain no puzzles you solved and nothing you wrote.</p>
+    <p class="note">One thing we do not control: if you have <span class="terms">iOS Settings › Privacy &amp; Security › Analytics &amp; Improvements › iPhone Analytics</span> turned on with sharing enabled, iOS itself may send us a crash report when the app quits unexpectedly. Those reports come from the operating system, not from code in the app, and contain no puzzles you solved and nothing you wrote.</p>
 
     <h2>2. What is stored, and where</h2>
     <p>Everything the app knows about you lives in the app's own storage on this device:</p>
@@ -30,11 +50,11 @@
     <p>None of it is tied to your name, your email, your Apple ID or your location, because the app never asks for any of those.</p>
 
     <h2>3. Your controls, inside the app</h2>
-    <p>All three are under <span class="term">Profile › Settings</span>:</p>
+    <p>All three are under <span class="terms">Profile › Settings</span>:</p>
     <ul>
-      <li><span class="term">Export your data</span> — writes the complete local record (every run, every recorded move, every setting) to a JSON file you control. The app hands it to the iOS share sheet and keeps nothing back; it is never uploaded anywhere by us.</li>
-      <li><span class="term">Reset all progress</span> — clears everything the app stores on this device. The confirmation tells you how many runs and levels are about to go. Your purchase is not touched, since that belongs to your Apple ID rather than to this device.</li>
-      <li><span class="term">Restore purchases</span> — asks Apple, on this device, whether your Apple ID already owns Unarrow Pro.</li>
+      <li><span class="terms">Export your data</span> — writes the complete local record (every run, every recorded move, every setting) to a JSON file you control. The app hands it to the iOS share sheet and keeps nothing back; it is never uploaded anywhere by us.</li>
+      <li><span class="terms">Reset all progress</span> — clears everything the app stores on this device. The confirmation tells you how many runs and levels are about to go. Your purchase is not touched, since that belongs to your Apple ID rather than to this device.</li>
+      <li><span class="terms">Restore purchases</span> — asks Apple, on this device, whether your Apple ID already owns Unarrow Pro.</li>
     </ul>
     <p>Deleting the app from your device removes its local storage too.</p>
 
@@ -51,14 +71,15 @@
     <p class="disclaimer">Unarrow is a puzzle game. It describes how you solve puzzles. It is not a measure of intelligence and is not a medical or cognitive assessment.</p>
 
     <h2>8. If this changes</h2>
-    <p>If a future version ever sends anything off your device, this page is rewritten to say what, to whom and why <strong>before</strong> that version ships, and the App Store privacy label is updated to match it. The version number this page describes is in the footer.</p>
+    <p>If a future version ever sends anything off your device, this page is rewritten to say what, to whom and why <strong>before</strong> that version ships, and the App Store privacy label is updated to match it. The version this page describes is in the footer.</p>
 
     <h2>9. Contact</h2>
-    <p>Questions about this page, or a request you would rather not handle inside the app: <a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a>.</p>
+    <p>Questions about this page, or a request you would rather not handle inside the app: <a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a>, or see the <a href="unarrow-support.html">support page</a>.</p>
   </div>
 
   <footer>
     Last updated: 10 October 2026. Applies to Unarrow 1.0.<br>
+    <a href="unarrow-support.html">Support</a> · <a href="https://app111.github.io/privacy/">All apps</a>
   </footer>
 </div>
 </body>

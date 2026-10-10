@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unarrow — Support</title>
+<meta name="description" content="Help with Unarrow: progress, the daily board, purchases and data.">
+<style>
+:root { --page:#f4f5f8; --card:#fff; --text:#17181c; --muted:#6b6f7d; --line:#e9eaf0; --accent:#4a5ae0; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--page); color:var(--text);
+  font:16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing:antialiased; }
+.wrap { max-width:44rem; margin:0 auto; padding:56px 20px 80px; }
+.eyebrow { font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 6px; }
+h1 { font-size:30px; line-height:1.2; letter-spacing:-.02em; margin:0 0 12px; }
+.lede { font-size:17px; color:var(--muted); margin:0 0 32px; }
+.card { background:var(--card); border-radius:20px; padding:28px 26px; box-shadow:0 8px 24px rgba(30,34,50,.06); margin-bottom:20px; }
+h2 { font-size:18px; letter-spacing:-.01em; margin:28px 0 8px; }
+.card h2:first-child { margin-top:0; }
+p { margin:0 0 12px; } p:last-child { margin-bottom:0; }
+ul { margin:0 0 12px; padding-left:20px; } li { margin-bottom:6px; }
+a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+.terms { font-weight:700; }
+footer { font-size:13px; color:var(--muted); margin-top:28px; }
+@media print { body { background:#fff; } .card { box-shadow:none; border:1px solid var(--line); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Unarrow</p>
+  <h1>Support</h1>
+  <p class="lede">Unarrow is a five-minute arrow puzzle with a record of how you solved it. Most questions have an answer below; anything else, write to us.</p>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p><a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></p>
+    <p>If it helps to know what you were doing, include the level or Daily number and roughly when — but send nothing you would not want kept. Because the app has no server, we usually cannot look up your game even if we wanted to, which also means there is very little about you for anyone to leak.</p>
+
+    <h2>Your progress</h2>
+    <p>Everything lives on the device you play on: cleared levels, best moves, every recorded step, your Brain Score and your streak. There is no account to sign in to.</p>
+    <ul>
+      <li><strong>New phone?</strong> This version has no cloud sync of its own. Your existing iPhone's backup (iCloud or a computer backup) carries the app's data across when you set the new phone up from that backup.</li>
+      <li><strong>Start over?</strong> <span class="terms">Profile › Settings › Reset all progress</span> clears it all, and tells you how much is about to go first.</li>
+      <li><strong>Want a copy?</strong> <span class="terms">Profile › Settings › Export your data</span> writes the whole record to a JSON file you can keep or send us.</li>
+    </ul>
+
+    <h2>The daily board</h2>
+    <p>Everyone gets the same board on the same day, and it is generated from the date rather than fetched — so it works on a plane. It rolls over at midnight <em>where you are</em>, which is also what the daily reminder follows. If you travel across time zones, the reset moves with you.</p>
+    <p>On the free plan you get one attempt at today's board. It counts as used when a run ends, whether you clear it or walk away; restarting inside the same run does not spend a second one.</p>
+
+    <h2>Brain Score</h2>
+    <p>It is a description of how you solve puzzles, built from your own runs on this device. It is not an IQ score, not a comparison with other players, and not a medical or cognitive assessment.</p>
+    <p>If it says <span class="terms">Building your baseline</span>, that is honest rather than broken: the first ten runs are not enough to average, so the app says so instead of showing you a made-up number.</p>
+
+    <h2>Purchases, trial and cancelling</h2>
+    <ul>
+      <li><strong>Already paid but locked out?</strong> <span class="terms">Profile › Settings › Restore purchases</span> asks Apple what your Apple ID owns.</li>
+      <li><strong>Cancel a subscription:</strong> <span class="terms">iOS Settings › your name › Subscriptions</span>. Cancelling turns off the next renewal; what you paid for runs to the end of the period. Cancel a free trial at least 24 hours before it ends and nothing is charged.</li>
+      <li><strong>Refunds</strong> are issued by Apple, not by us: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+    </ul>
+
+    <h2>Deleting data we hold</h2>
+    <p>Nothing. Version 1.0 uploads nothing, so there is no record under your name on our side to remove — the in-app reset is the complete deletion. If you would still like to ask, use the address above.</p>
+  </div>
+
+  <footer>
+    Applies to Unarrow 1.0 · <a href="unarrow-privacy.html">Privacy Policy</a> · <a href="https://app111.github.io/privacy/">All apps</a>
+  </footer>
+</div>
+</body>
+</html>
