@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Finwhale Privacy Policy / 鲸记隐私政策</title>
-<meta name="description" content="Finwhale (鲸记) stores your ledger on your device. This policy explains exactly what leaves the device and why.">
+<title>Finwhale Privacy Policy / 鲸鱼记账隐私政策</title>
+<meta name="description" content="Finwhale (鲸鱼记账) stores your ledger on your device. This policy explains exactly what leaves the device and why.">
 <style>
   :root{
     --ink:#12232b; --ink2:#3d5460; --ink3:#7b8f99;
@@ -48,7 +48,7 @@
   <header>
     <h1>
       <span lang="en">Finwhale Privacy Policy</span>
-      <span lang="zh">鲸记（Finwhale）隐私政策</span>
+      <span lang="zh">鲸鱼记账（Finwhale）隐私政策</span>
     </h1>
     <button class="lang" id="langBtn" type="button">中文</button>
   </header>
@@ -59,7 +59,7 @@
 
   <div class="key">
     <span lang="en"><strong>We do not collect your data.</strong> Finwhale has no account system and no backend database. Your ledger, accounts and settings live only on your device. Three features can reach the network; each is listed below with exactly what leaves the device.</span>
-    <span lang="zh"><strong>我们不收集你的数据。</strong>鲸记没有账号体系，也没有后端数据库。你的账本、账户和设置只保存在本机。只有三项功能会发起网络请求，每项离开设备的内容都列在下面。</span>
+    <span lang="zh"><strong>我们不收集你的数据。</strong>鲸鱼记账没有账号体系，也没有后端数据库。你的账本、账户和设置只保存在本机。只有三项功能会发起网络请求，每项离开设备的内容都列在下面。</span>
   </div>
 
   <!-- 1 -->
@@ -169,7 +169,7 @@
       <p>Finwhale is a general-purpose budgeting tool intended for adults. It is rated 4+ because it contains no objectionable content, not because it is designed for children. We collect no data from anyone, of any age.</p>
     </div>
     <div lang="zh">
-      <p>鲸记是面向成人的通用记账工具。分级为 4+ 是因其不含不良内容，并非面向儿童设计。我们不向任何人、任何年龄段收集数据。</p>
+      <p>鲸鱼记账是面向成人的通用记账工具。分级为 4+ 是因其不含不良内容，并非面向儿童设计。我们不向任何人、任何年龄段收集数据。</p>
     </div>
   </section>
 
@@ -196,12 +196,17 @@
       <p id="mailPlainZh"></p>
     </div>
   </section>
+
+  <footer>
+    <span lang="en">Finwhale (鲸鱼记账) · com.kangzh.finwhale</span>
+    <span lang="zh">鲸鱼记账 Finwhale · com.kangzh.finwhale</span>
+  </footer>
 </div>
 
 <script>
 (function(){
   // Contact address is assembled at runtime so scrapers cannot harvest it in plain text.
-  var user = "niuniugede", host = "gmail", tld = "com";   // <-- EDIT THESE THREE to your real address
+  var user = "niuniugede", host = "gmail", tld = "com";   // -> niuniugede@gmail.com
   var addr = user + "@" + host + "." + tld;
   document.getElementById('mailTo').href = "mailto:" + addr;
   document.getElementById('mailTo').textContent = addr;
