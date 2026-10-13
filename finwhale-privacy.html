@@ -98,3 +98,134 @@
       <ul>
         <li>不需要也不索取账号、邮箱、手机号或姓名。</li>
         <li>不含广告、不接入任何广告网络，App 内没有第三方 SDK。</li>
+        <li>没有行为统计、没有使用埋点、没有崩溃收集、没有设备或广告标识符。</li>
+        <li>不会出售、共享、出租或转让任何个人数据 —— 因为我们不持有可共享的数据。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <h2><span lang="en">3. The three network requests, in detail</span><span lang="zh">三、三项联网功能的完整说明</span></h2>
+    <div lang="en">
+      <p><strong>3.1 Exchange rates.</strong> When you record an amount in a currency other than your home currency, the app fetches current rates from <code>api.frankfurter.dev</code>, an open public service. The request contains only the currency codes you need, for example <code>?base=USD&amp;symbols=EUR,JPY</code>. It carries none of your ledger data and no personal identifier. Your standard iOS/IP address is visible to that service as it is to any website you visit.</p>
+      <p><strong>3.2 Voice entry.</strong> If you use "hold to speak", audio is transcribed through Apple's Speech Recognition framework. Apple's own privacy terms apply to that transcription. The app does not store the audio recording, and does not receive or keep a transcript beyond filling in the amount and note fields on your screen.</p>
+      <p><strong>3.3 Receipt / screenshot recognition.</strong> If you pick a payment screenshot, the image is analysed by Apple's Vision framework <strong>on your device</strong>. The image is not uploaded, and the recognised text goes straight into a draft entry that you must confirm before it is saved.</p>
+      <p>Nothing else in the app contacts a network. Browsing your ledger, editing, deleting, budgeting, reports and exporting all work with Airplane Mode on.</p>
+    </div>
+    <div lang="zh">
+      <p><strong>3.1 汇率获取。</strong>当你记录非主币种金额时，App 会向公开服务 <code>api.frankfurter.dev</code> 请求最新汇率。请求内容只有你需要的币种代码，例如 <code>?base=USD&amp;symbols=EUR,JPY</code>，不含任何账本数据与个人标识。该服务会像任何网站一样看到你的 iOS/网络 IP 地址。</p>
+      <p><strong>3.2 语音记账。</strong>使用「按住说话」时，语音通过苹果的语音识别（Speech Recognition）框架转写，该转写适用苹果自身的隐私条款。App 不保存录音音频，也除填充到你屏幕上的金额与备注外不留存任何转写文本。</p>
+      <p><strong>3.3 小票/截图识别。</strong>你选择支付截图后，图片由苹果 Vision 框架<strong>在本机</strong>分析。图片不会上传，识别出的文字只会生成一条待确认草稿，需你确认才会入账。</p>
+      <p>除以上三项，App 内没有任何其他联网行为。查看账本、编辑删除、预算、报表、导出在飞行模式下均可正常使用。</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <h2><span lang="en">4. Subscriptions and purchases</span><span lang="zh">四、订阅与购买</span></h2>
+    <div lang="en">
+      <p>Finwhale Pro is sold through Apple's App Store using StoreKit. Your subscription is managed by Apple, and Apple receives the payment. We never see your name, card details or billing address, and we do not receive a list of who has subscribed. A receipt may be stored on your device so the app can restore your entitlements after a reinstall.</p>
+    </div>
+    <div lang="zh">
+      <p>Finwhale Pro 通过苹果 App Store 与 StoreKit 销售，订阅由苹果管理，款项由苹果收取。我们看不到你的姓名、银行卡信息或账单地址，也不会收到订阅者名单。购买凭证可能保存在你的设备上，以便重装后恢复你的权益。</p>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <h2><span lang="en">5. App privacy label</span><span lang="zh">五、App 隐私标签</span></h2>
+    <div lang="en">
+      <p>In the App Store privacy nutrition label we declare that this app does <strong>not</strong> collect data. The only data that exists is on your device and is not transmitted to us or to third parties in a way that constitutes "collection" under Apple's definition.</p>
+    </div>
+    <div lang="zh">
+      <p>在 App Store 的隐私营养标签中，我们声明本 App <strong>不收集</strong>数据。唯一存在的数据在你设备上，不会以苹果定义构成「收集」的方式传输给我们或第三方。</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <h2><span lang="en">6. Your controls</span><span lang="zh">六、你对数据的控制权</span></h2>
+    <div lang="en">
+      <ul>
+        <li><strong>Export.</strong> Data &amp; Privacy → Export produces full CSV and JSON files of everything you have recorded, which you save, share or delete yourself.</li>
+        <li><strong>Deletion.</strong> Deleting an entry removes it immediately. Deleting the app removes the entire on-device database. There is no server-side copy to ask us to erase.</li>
+        <li><strong>Lock.</strong> You can require Face ID / Touch ID to open the app, and hide balances when the app moves to the background.</li>
+      </ul>
+    </div>
+    <div lang="zh">
+      <ul>
+        <li><strong>导出。</strong>「数据与隐私 → 导出」可生成包含全部记录的 CSV 与 JSON 文件，由你自己保存、分享或删除。</li>
+        <li><strong>删除。</strong>删除某笔记录即刻生效；卸载 App 会连同本机数据库一并清除。服务端没有副本需要你去请求删除。</li>
+        <li><strong>锁定。</strong>可要求 Face ID / Touch ID 才能打开 App，并在切后台时遮挡金额。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <h2><span lang="en">7. Children</span><span lang="zh">七、儿童隐私</span></h2>
+    <div lang="en">
+      <p>Finwhale is a general-purpose budgeting tool intended for adults. It is rated 4+ because it contains no objectionable content, not because it is designed for children. We collect no data from anyone, of any age.</p>
+    </div>
+    <div lang="zh">
+      <p>鲸记是面向成人的通用记账工具。分级为 4+ 是因其不含不良内容，并非面向儿童设计。我们不向任何人、任何年龄段收集数据。</p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <h2><span lang="en">8. Changes to this policy</span><span lang="zh">八、政策变更</span></h2>
+    <div lang="en">
+      <p>If this policy changes, the date at the top of this page is updated and the new version is published here. This page is the authoritative version; any translation is for convenience only.</p>
+    </div>
+    <div lang="zh">
+      <p>若本政策变更，本页顶部日期会更新并在此发布新版。本页为权威版本，其他语言仅供阅读便利。</p>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section>
+    <h2><span lang="en">9. Contact</span><span lang="zh">九、联系我们</span></h2>
+    <div lang="en">
+      <p>Questions about this policy, or a feature request that touches privacy: <strong><a id="mailTo" href="#">see contact below</a></strong>.</p>
+      <p id="mailPlain"></p>
+    </div>
+    <div lang="zh">
+      <p>关于本政策的疑问，或涉及隐私的功能建议，可通过下方方式联系我们。</p>
+      <p id="mailPlainZh"></p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  // Contact address is assembled at runtime so scrapers cannot harvest it in plain text.
+  var user = "niuniugede", host = "gmail", tld = "com";   // <-- EDIT THESE THREE to your real address
+  var addr = user + "@" + host + "." + tld;
+  document.getElementById('mailTo').href = "mailto:" + addr;
+  document.getElementById('mailTo').textContent = addr;
+  var plain = document.getElementById('mailPlain');
+  var plainZh = document.getElementById('mailPlainZh');
+  if (plain) plain.textContent = addr;
+  if (plainZh) plainZh.textContent = addr;
+
+  var root = document.documentElement;
+  var btn = document.getElementById('langBtn');
+  function detect(){
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    return nav.toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  }
+  function set(l){
+    root.lang = l;
+    btn.textContent = l === 'zh' ? 'English' : '中文';
+    try { localStorage.setItem('finwhale-lang', l); } catch(e){}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('finwhale-lang'); } catch(e){}
+  set(saved || detect());
+  btn.addEventListener('click', function(){ set(root.lang === 'zh' ? 'en' : 'zh'); });
+})();
+</script>
+</body>
+</html>
