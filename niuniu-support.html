@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>支持 / Support — 牛牛浏览器</title>
+<style>
+  :root { --text: #1d1d1f; --sub: #6e6e73; --line: #e5e5ea; --accent: #2563eb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px 20px 64px; background: #fff; color: var(--text);
+         font: 16px/1.75 -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .meta { color: var(--sub); font-size: 14px; margin-bottom: 28px; }
+  h2 { font-size: 20px; margin: 36px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+  p, li { margin: 8px 0; }
+  ul { padding-left: 22px; }
+  .lead { font-size: 17px; }
+  dt { font-weight: 600; margin-top: 18px; }
+  dd { margin: 4px 0 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; }
+  address { font-style: normal; font-size: 18px; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; color: var(--sub); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>支持 / Support</h1>
+  <p class="meta">牛牛浏览器（NiuNiu Browser）· 适用于版本 1.1<br>
+  邮箱 / Email: <a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></p>
+
+  <p class="lead">这是一款把数据留在自己手机上的浏览器。遇到问题先看下面的清单，多数情况可以在应用内解决。</p>
+
+  <h2>一、常见问题</h2>
+  <dl>
+    <dt>广告过滤把正常内容拦掉了怎么办？</dt>
+    <dd>浏览页右上角盾牌 → 广告拦截详情 → 关闭「广告过滤」即可放行本页。想长期只拦某类域名，可在同页添加自定义拦截域名（会员功能）。</dd>
+
+    <dt>「本页拦截」显示 0，是不是没生效？</dt>
+    <dd>不一定。计数只统计命中广告域名的资源加载失败，页面本身没有这类请求时就是 0，可对照「累计拦截」确认规则在工作。</dd>
+
+    <dt>网页视频调不出播放器 / 倍速没反应？</dt>
+    <dd>播放器只在检测到 HTML5 <code>&lt;video&gt;</code> 时出现。使用自研播放内核或 DRM 加密流的站点（部分长视频站）无法接管，这是系统 WebKit 的限制。</dd>
+
+    <dt>清晰度为什么只有部分视频能选？</dt>
+    <dd>清晰度只对 HLS 自适应流（m3u8）有意义，iOS 侧能控制的是峰值码率上限；单文件视频没有可切换的变体，这时面板就不显示。</dd>
+
+    <dt>下载中断了会重新下吗？</dt>
+    <dd>不会。下载支持断点续传：切到后台会自动暂停，回到应用自动继续；手动暂停后可从断点接着下。</dd>
+
+    <dt>私密空间忘了面容 / 换机怎么办？</dt>
+    <dd>可用设备密码进入。文件与钥匙串密钥都只在本机，<strong>不提供云端备份或找回</strong>，卸载应用或恢复出厂会永久丢失，请先移出重要文件。</dd>
+
+    <dt>无痕标签真的不留痕迹吗？</dt>
+    <dd>不写浏览历史；无痕标签使用独立的非持久站点数据，关闭标签即连同 Cookie 与缓存一起丢弃。书签只有你手动点「收藏」才会保存。网站侧仍能通过它自己的日志识别访问，这不在本应用可控范围内。</dd>
+
+    <dt>为什么没有小说、资讯入口？</dt>
+    <dd>本应用不内置任何内容源。主页的「小说」入口只有在你自己填写第三方 H5 网址后才会出现，内容由该网站自行提供。</dd>
+  </dl>
+
+  <h2>二、会员与订阅</h2>
+  <ul>
+    <li>会员解锁的能力只有一项：自定义拦截域名（最多 100 条）。其余功能全部免费。</li>
+    <li>取消或管理订阅：iPhone「设置 → Apple ID → 订阅」。</li>
+    <li>换设备或重装后恢复购买：应用内「会员中心 → 恢复购买」，用同一个 Apple ID 即可。</li>
+    <li>退款由 Apple 处理，请在 <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> 提交。</li>
+  </ul>
+
+  <h2>三、反馈时请一并说明</h2>
+  <ul>
+    <li>版本号（设置 → 关于）与机型、iOS 版本。</li>
+    <li>出现问题的网址（如果方便公开）和具体表现。</li>
+    <li>是否只在某个网站出现，还是所有页面都这样。</li>
+  </ul>
+
+  <h2>四、联系我们</h2>
+  <address><a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></address>
+  <p>工作日 7 天内回复。</p>
+
+  <footer>
+    相关页面：<a href="niuniu-privacy.html">隐私政策 / Privacy Policy</a> ·
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 软件许可协议（标准 EULA）</a><br>
+    © 2026 Zhihui Kang
+  </footer>
+</main>
+</body>
+</html>
