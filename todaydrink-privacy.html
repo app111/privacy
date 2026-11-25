@@ -3,15 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>隐私政策 - 今天喝啥</title>
+<title>隐私政策 · Privacy Policy - TodayDrink</title>
 <style>
 body{max-width:720px;margin:0 auto;padding:32px 20px;color:#1c1c1e;
 font-family:-apple-system,"PingFang SC",sans-serif;line-height:1.8}
 h1{font-size:26px}h2{font-size:19px;margin-top:28px}
 .meta{color:#6c6c70;font-size:14px}
+.switch{float:right;font-size:14px;padding-top:8px}
+.switch a{color:#007aff;text-decoration:none;cursor:pointer}
+.switch a.on{color:#1c1c1e;font-weight:600;pointer-events:none}
+body[data-lang="zh"] .lang-en,body[data-lang="en"] .lang-zh{display:none}
 </style>
 </head>
-<body>
+<body data-lang="zh">
+<div class="switch">
+<a id="btn-zh">中文</a> · <a id="btn-en">English</a>
+</div>
+
+<div class="lang-zh">
 <h1>隐私政策</h1>
 <p class="meta">最后更新：2026-08-30</p>
 <p>「今天喝啥」是一款本地饮品记录工具。本政策只说明一件事：唯一会离开您设备的数据，
@@ -50,5 +59,77 @@ h1{font-size:26px}h2{font-size:19px;margin-top:28px}
 <h2>六、数据删除与更新</h2>
 <p>在应用内删除记录或卸载应用，即彻底删除全部本地数据；AI 服务商侧的处理
 按其隐私政策执行。本政策如有更新，在本页发布并更新顶部日期。联系邮箱：niuniugede@gmail.com</p>
+</div>
+
+<div class="lang-en">
+<h1>Privacy Policy</h1>
+<p class="meta">Last updated: 2026-08-30</p>
+<p>TodayDrink is a local-first drink logging tool. This policy explains one thing only:
+the only data that ever leaves your device is what you actively send while using an AI
+feature, and where it goes.</p>
+
+<h2>1. Data stored only on your device</h2>
+<p>Drink records (name, sugar, caffeine, calories, price and more), daily goals and
+preferences, and Home Screen widget data are all stored in your device's local secure
+storage. We run no server database and cannot access this data; uninstalling the app
+deletes it permanently.</p>
+
+<h2>2. Data sent to third-party AI services</h2>
+<p>Only when you <b>actively tap an AI feature</b> (recognize a drink, generate an
+insight report) is the following sent over an encrypted connection (HTTPS) to the
+Zhipu Open Platform (Beijing Zhipu Huazhang Technology,
+<a href="https://open.bigmodel.cn/dev/api/privacy">privacy policy</a>) for processing:</p>
+<ul>
+<li>The drink photo you took (sent compressed, used only to identify the drink name
+and its nutrition);</li>
+<li>Anonymous figures aggregated locally by the app (such as "7 cups this week,
+172 g of sugar"), used only to generate personalized suggestions.</li>
+</ul>
+<p>We never store this content; please avoid including personally identifiable
+information in photos.</p>
+
+<h2>3. What we never do</h2>
+<ul>
+<li>No sign-up, and we don't collect your name, email, phone number or any other
+identity information;</li>
+<li>No ads, no analytics or advertising SDKs, no cross-app tracking;</li>
+<li>We don't sell or share your data (except the AI processing described in
+Section 2).</li>
+</ul>
+
+<h2>4. Notifications &amp; permissions</h2>
+<p>Reminders use system local notifications — they never touch the network and can be
+turned off anytime. The camera permission is used only to photograph drinks and can be
+revoked in system Settings.</p>
+
+<h2>5. Minors</h2>
+<p>Minors should use the app with a guardian's consent; we do not knowingly collect
+any information from minors.</p>
+
+<h2>6. Data deletion &amp; updates</h2>
+<p>Deleting records in the app, or uninstalling it, erases all local data permanently;
+processing on the AI provider's side follows its own privacy policy. Updates to this
+policy are published on this page with the date at the top updated. Contact:
+niuniugede@gmail.com</p>
+</div>
+
+<script>
+(function(){
+  var KEY='td-privacy-lang';
+  function set(l){
+    document.body.dataset.lang=l;
+    document.documentElement.lang=l==='zh'?'zh-CN':'en';
+    document.getElementById('btn-zh').classList.toggle('on',l==='zh');
+    document.getElementById('btn-en').classList.toggle('on',l==='en');
+    try{localStorage.setItem(KEY,l)}catch(e){}
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(saved==='zh'||saved==='en'){set(saved)}
+  else{set((navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en')}
+  document.getElementById('btn-zh').addEventListener('click',function(){set('zh')});
+  document.getElementById('btn-en').addEventListener('click',function(){set('en')});
+})();
+</script>
 </body>
 </html>
