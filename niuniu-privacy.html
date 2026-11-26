@@ -22,72 +22,166 @@
   .lead { font-size: 17px; }
   a { color: var(--accent); }
   footer { margin-top: 48px; color: var(--sub); font-size: 14px; }
+  .switch { float: right; font-size: 14px; padding-top: 8px; }
+  .switch a { color: var(--accent); cursor: pointer; }
+  .switch a.on { color: var(--text); font-weight: 600; pointer-events: none; }
+  body[data-lang="zh"] .lang-en, body[data-lang="en"] .lang-zh { display: none; }
 </style>
 </head>
-<body>
+<body data-lang="zh">
 <main>
-  <h1>隐私政策</h1>
-  <p class="meta">牛牛浏览器（NiuNiu Browser）<br>
-  最近更新：2026 年 10 月 29 日 · 适用于版本 1.1 及之后</p>
+  <div class="switch"><a id="btn-zh">中文</a> · <a id="btn-en">English</a></div>
 
-  <p class="lead">牛牛浏览器不收集你的数据。浏览记录、书签、下载文件和私密空间内容全部只保存在你自己的设备上，不上传、不同步、不共享。首页天气会用到定位，我们只用它确定你所在的城市，不记录、也不保存你的位置。</p>
-  <p>本应用由个人开发者开发并运营，没有账号系统，也没有服务器。</p>
+  <div class="lang-zh">
+    <h1>隐私政策</h1>
+    <p class="meta">牛牛浏览器（NiuNiu Browser）<br>
+    最近更新：2026 年 11 月 26 日 · 适用于版本 1.3 及之后</p>
 
-  <h2>一、我们不会做的事</h2>
-  <ul>
-    <li>不申请麦克风、通讯录、照片图库权限，也不申请 App 跟踪授权（不读取 IDFA）。</li>
-    <li>不接入任何第三方统计、崩溃分析、广告或推送 SDK。应用内没有广告位。</li>
-    <li>不读取、不上传你在浏览器里访问的网页内容、搜索词、Cookie 或账号信息。</li>
-    <li>不存储也不传输你的面容信息。私密空间使用系统 Face ID 本地校验，面容数据始终留在设备的安全隔区里。</li>
-  </ul>
+    <p class="lead">牛牛浏览器不收集你的数据。浏览记录、书签、下载文件和私密空间内容全部只保存在你自己的设备上，不上传、不同步、不共享。首页天气会用到定位，我们只用它确定你所在的城市，不记录、也不保存你的位置；天气与定位仅在中文界面提供。</p>
+    <p>本应用由个人开发者开发并运营，没有账号系统，也没有服务器。</p>
 
-  <h2>二、数据存在哪里</h2>
-  <table>
-    <tr><th>数据</th><th>存放位置与说明</th></tr>
-    <tr><td>浏览历史、书签</td><td>仅存于本设备应用沙盒。无痕标签不写浏览历史，其 Cookie 与站点数据也不落盘。</td></tr>
-    <tr><td>下载文件</td><td>仅存于本设备应用沙盒。</td></tr>
-    <tr><td>私密空间文件</td><td>存于本设备应用沙盒的独立目录，使用 iOS 钥匙串生成的密钥加密，密钥不离开这台设备。</td></tr>
-    <tr><td>广告拦截统计与自定义拦截域名</td><td>仅存于本设备。拦截规则由系统的网络内容规则在本机生效，不经过任何服务器。</td></tr>
-    <tr><td>会员与购买状态</td><td>由 App Store 的 StoreKit 在本机校验，本应用不上传交易信息，也没有服务端可供查询。</td></tr>
-    <tr><td>位置（首页天气）</td><td>定位按需请求，精度到城市级别；在本机把坐标换成城市名，坐标不保存、不发送。查询天气时只把城市名发给天气服务商。</td></tr>
-  </table>
+    <h2>一、我们不会做的事</h2>
+    <ul>
+      <li>不申请麦克风、通讯录、照片图库权限，也不申请 App 跟踪授权（不读取 IDFA）。</li>
+      <li>不接入任何第三方统计、崩溃分析、广告或推送 SDK。应用内没有广告位。</li>
+      <li>不读取、不上传你在浏览器里访问的网页内容、搜索词、Cookie 或账号信息。</li>
+      <li>不存储也不传输你的面容信息。私密空间使用系统 Face ID 本地校验，面容数据始终留在设备的安全隔区里。</li>
+    </ul>
 
-  <h2>三、申请了哪些权限</h2>
-  <p>用到哪项能力才申请哪项权限，拒绝任何一项都不影响其余功能。</p>
-  <table>
-    <tr><th>权限</th><th>用途</th></tr>
-    <tr><td>位置（使用期间）</td><td>只在首页天气使用：确定你所在的城市，查当地天气。不记录、不保存你的轨迹与坐标。</td></tr>
-    <tr><td>相机</td><td>只在「扫一扫」扫码时使用，识别二维码后打开网页。画面不保存、不上传。</td></tr>
-    <tr><td>Face ID / 设备密码</td><td>只在进入私密空间时校验，由系统在本机完成。面容数据始终留在设备的安全隔区。</td></tr>
-  </table>
-  <p>天气数据由第三方天气服务提供，查询只发送城市名称，不发送设备标识或位置坐标。</p>
+    <h2>二、数据存在哪里</h2>
+    <table>
+      <tr><th>数据</th><th>存放位置与说明</th></tr>
+      <tr><td>浏览历史、书签</td><td>仅存于本设备应用沙盒。无痕标签不写浏览历史，其 Cookie 与站点数据也不落盘。</td></tr>
+      <tr><td>下载文件</td><td>仅存于本设备应用沙盒。</td></tr>
+      <tr><td>私密空间文件</td><td>存于本设备应用沙盒的独立目录，使用 iOS 钥匙串生成的密钥加密，密钥不离开这台设备。</td></tr>
+      <tr><td>广告过滤统计与历史自定义域名</td><td>仅存于本设备。拦截规则由系统的网络内容规则在本机生效，不经过任何服务器。</td></tr>
+      <tr><td>Pro 与购买状态</td><td>由 App Store 的 StoreKit 在本机校验，本应用不上传交易信息，也没有服务端可供查询。</td></tr>
+      <tr><td>位置（首页天气，仅中文界面）</td><td>定位按需请求，精度到城市级别；在本机把坐标换成城市名，坐标不保存、不发送。查询天气时只把城市名发给天气服务商。</td></tr>
+    </table>
 
-  <h2>四、关于 App Store 购买</h2>
-  <p>应用内的「牛牛会员」为自动续期订阅或一次性内购，付款与续订由 Apple 处理，账单信息（包括你的 Apple ID 与购买记录）由 Apple 收集和管理，我们不获取你的信用卡号或账单地址。</p>
-  <p>订阅会自动续期，在当前订阅期结束前 24 小时内向你的 Apple ID 账户收费。你可以随时在 iPhone 的「设置 → Apple ID → 订阅」中取消，取消后不再扣费；已支付的当期费用不予退还。</p>
-  <p>会员解锁的能力有两项：「自定义拦截域名」（最多 100 条）与「私密空间」（把文件加密后单独存放）。私密空间里已有的文件不受会员状态影响，到期或退款后仍可随时进入取回；其余功能对所有人免费。</p>
+    <h2>三、申请了哪些权限</h2>
+    <p>用到哪项能力才申请哪项权限，拒绝任何一项都不影响其余功能。</p>
+    <table>
+      <tr><th>权限</th><th>用途</th></tr>
+      <tr><td>位置（使用期间）</td><td>只在中文界面的首页天气使用：确定你所在的城市，查当地天气。不记录、不保存你的轨迹与坐标。</td></tr>
+      <tr><td>相机</td><td>只在「扫一扫」扫码时使用，识别二维码后打开网页。画面不保存、不上传。</td></tr>
+      <tr><td>Face ID / 设备密码</td><td>只在进入私密空间时校验，由系统在本机完成。面容数据始终留在设备的安全隔区。</td></tr>
+    </table>
+    <p>天气数据由第三方天气服务提供，查询只发送城市名称，不发送设备标识或位置坐标。</p>
 
-  <h2>五、如何删除你的数据</h2>
-  <ul>
-    <li>应用内：「设置 → 清除浏览数据」可一次性删除历史、书签与拦截统计；文件页可直接删除下载内容与私密空间文件。</li>
-    <li>删除应用会把沙盒内的全部数据一并移除。</li>
-    <li>我们没有服务器数据可以为你删除。购买记录的查询与删除请通过 Apple 处理，见 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
-  </ul>
+    <h2>四、NiuNiu Pro 与 App Store 购买</h2>
+    <p>应用内的 NiuNiu Pro 提供按月、按年自动续期订阅与一次性买断。付款与续订由 Apple 处理，账单信息（包括你的 Apple ID 与购买记录）由 Apple 收集和管理，我们不获取你的信用卡号或账单地址。</p>
+    <p>订阅会自动续期，在当前订阅期结束前 24 小时内向你的 Apple ID 账户收费。你可以随时在 iPhone 的「设置 → Apple ID → 订阅」中取消，取消后不再扣费；已支付的当期费用不予退还。一次性买断没有续费。</p>
+    <p>Pro 解锁的能力：净链接复制与分享（移除常见追踪参数）、站点级保护（按网站记住广告过滤偏好）、本机拦截统计和私密文件搜索。这些能力都在本机运行，不新增任何数据上传。其余功能对所有人免费，包括广告过滤与私密空间的加密移入。</p>
+    <p>旧版本保存的自定义拦截域名仍在本机生效，可随时在广告拦截详情中查看和移除。</p>
 
-  <h2>六、未成年人</h2>
-  <p>本应用不面向儿童，不收集任何用户身份信息，因此不存在需要代表监护人处理的儿童数据。</p>
+    <h2>五、如何删除你的数据</h2>
+    <ul>
+      <li>应用内：「设置 → 清除浏览数据」可一次性删除历史、书签与拦截统计；文件页可直接删除下载内容与私密空间文件。</li>
+      <li>删除应用会把沙盒内的全部数据一并移除。</li>
+      <li>我们没有服务器数据可以为你删除。购买记录的查询与删除请通过 Apple 处理，见 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
+    </ul>
 
-  <h2>七、政策变更</h2>
-  <p>如果政策发生变化，我们会更新本页的「最近更新」日期，并随应用版本发布说明。继续使用即表示你了解更新后的政策。</p>
+    <h2>六、未成年人</h2>
+    <p>本应用不面向儿童，不收集任何用户身份信息，因此不存在需要代表监护人处理的儿童数据。</p>
 
-  <h2>八、联系我们</h2>
-  <p>有任何隐私方面的问题或建议，请写信到 <a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a>，我们会在 7 个工作日内回复。</p>
+    <h2>七、政策变更</h2>
+    <p>如果政策发生变化，我们会更新本页的「最近更新」日期，并随应用版本发布说明。继续使用即表示你了解更新后的政策。</p>
 
-  <footer>
-    相关页面：<a href="niuniu-support.html">技术支持 / Support</a> ·
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 软件许可协议（标准 EULA）</a><br>
-    © 2026 NiuNiu Browser
-  </footer>
+    <h2>八、联系我们</h2>
+    <p>有任何隐私方面的问题或建议，请写信到 <a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a>，我们会在 7 个工作日内回复。</p>
+
+    <footer>
+      相关页面：<a href="niuniu-support.html">技术支持 / Support</a> ·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 软件许可协议（标准 EULA）</a><br>
+      © 2026 NiuNiu Browser
+    </footer>
+  </div>
+
+  <div class="lang-en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">NiuNiu Browser<br>
+    Last updated: November 26, 2026 · Applies to version 1.3 and later</p>
+
+    <p class="lead">NiuNiu Browser does not collect your data. Browsing history, bookmarks, downloaded files, and Private Space content stay only on your own device. They are never uploaded, synced, or shared. The weather card on the home screen uses location, but only to determine your city; your location is never recorded or stored. Weather and location are available in the Chinese interface only.</p>
+    <p>The app is built and operated by an individual developer. There is no account system and no server.</p>
+
+    <h2>1. What we never do</h2>
+    <ul>
+      <li>We do not request microphone, contacts, or photo library access, and we do not request App Tracking Transparency permission (no IDFA).</li>
+      <li>We do not include any third-party analytics, crash reporting, advertising, or push SDKs. There are no ad slots in the app.</li>
+      <li>We do not read or upload the pages you visit, your search terms, cookies, or account information.</li>
+      <li>We do not store or transmit your face data. Private Space uses on-device Face ID verification; face data always stays in the device's Secure Enclave.</li>
+    </ul>
+
+    <h2>2. Where data lives</h2>
+    <table>
+      <tr><th>Data</th><th>Location and notes</th></tr>
+      <tr><td>History and bookmarks</td><td>Stored only in the app sandbox on this device. Private tabs do not write history, and their cookies and site data are not persisted.</td></tr>
+      <tr><td>Downloaded files</td><td>Stored only in the app sandbox on this device.</td></tr>
+      <tr><td>Private Space files</td><td>Stored in a separate directory in the app sandbox, encrypted with a key generated in the iOS Keychain. The key never leaves this device.</td></tr>
+      <tr><td>Blocking statistics and legacy custom domains</td><td>Stored only on this device. Blocking rules are enforced on-device by the system's network content rules and never pass through a server.</td></tr>
+      <tr><td>Pro and purchase status</td><td>Verified on-device by StoreKit. The app does not upload transaction information, and there is no backend to query.</td></tr>
+      <tr><td>Location (weather, Chinese interface only)</td><td>Requested only when needed, at city-level accuracy. Coordinates are converted to a city name on-device and are never stored or sent. Only the city name is sent to the weather provider.</td></tr>
+    </table>
+
+    <h2>3. Permissions we request</h2>
+    <p>Each permission is requested only for the feature that needs it. Declining any permission does not affect the rest of the app.</p>
+    <table>
+      <tr><th>Permission</th><th>Purpose</th></tr>
+      <tr><td>Location (while using)</td><td>Used only by the home-screen weather card in the Chinese interface, to determine your city and show local weather. Your track and coordinates are never recorded or stored.</td></tr>
+      <tr><td>Camera</td><td>Used only by the QR scanner to read a code and open a page. Frames are never saved or uploaded.</td></tr>
+      <tr><td>Face ID / device passcode</td><td>Used only to unlock Private Space, verified on-device by the system. Face data always stays in the Secure Enclave.</td></tr>
+    </table>
+    <p>Weather data comes from a third-party weather provider. Queries contain only a city name, with no device identifiers or coordinates.</p>
+
+    <h2>4. NiuNiu Pro and App Store purchases</h2>
+    <p>NiuNiu Pro is available as a monthly or yearly auto-renewable subscription, or as a one-time purchase. Payment and renewal are handled by Apple. Billing information, including your Apple ID and purchase history, is collected and managed by Apple; we never receive your card number or billing address.</p>
+    <p>Subscriptions renew automatically and are charged to your Apple ID within 24 hours before the end of the current period. You can cancel anytime in iPhone Settings → Apple ID → Subscriptions. Cancellation stops future charges; the current period is not refunded. The one-time purchase does not renew.</p>
+    <p>Pro unlocks clean link copying and sharing (removing common tracking parameters), per-site protection (remembering ad-blocking preferences for a site), on-device blocking statistics, and private file search. All of these run on this device and add no data upload. Everything else is free for everyone, including ad blocking and encrypting files into Private Space.</p>
+    <p>Custom blocking domains saved by earlier versions remain active on this device and can be viewed or removed anytime in the ad blocking details.</p>
+
+    <h2>5. How to delete your data</h2>
+    <ul>
+      <li>In the app: Settings → Clear Browsing Data removes history, bookmarks, and blocking statistics at once. The Files screen lets you delete downloads and Private Space files directly.</li>
+      <li>Deleting the app removes all data in its sandbox.</li>
+      <li>We have no server-side data to delete for you. To access or delete purchase records, contact Apple as described in the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>6. Children</h2>
+    <p>This app is not directed at children and does not collect any identifying information, so there is no children's data for a guardian to request deletion of.</p>
+
+    <h2>7. Policy changes</h2>
+    <p>If this policy changes, we will update the "Last updated" date on this page and include it in the app release notes. Continued use means you understand the updated policy.</p>
+
+    <h2>8. Contact</h2>
+    <p>For any privacy question or suggestion, email <a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a>. We reply within 7 business days.</p>
+
+    <footer>
+      Related: <a href="niuniu-support.html">Support</a> ·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a><br>
+      © 2026 NiuNiu Browser
+    </footer>
+  </div>
 </main>
+
+<script>
+(function(){
+  var KEY='nn-privacy-lang';
+  function set(l){
+    document.body.dataset.lang=l;
+    document.documentElement.lang=l==='zh'?'zh-Hans':'en';
+    document.getElementById('btn-zh').classList.toggle('on',l==='zh');
+    document.getElementById('btn-en').classList.toggle('on',l==='en');
+    try{localStorage.setItem(KEY,l)}catch(e){}
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(saved==='zh'||saved==='en'){set(saved)}
+  else{set((navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en')}
+  document.getElementById('btn-zh').addEventListener('click',function(){set('zh')});
+  document.getElementById('btn-en').addEventListener('click',function(){set('en')});
+})();
+</script>
 </body>
 </html>

@@ -22,66 +22,152 @@
   address { font-style: normal; font-size: 18px; }
   a { color: var(--accent); }
   footer { margin-top: 48px; color: var(--sub); font-size: 14px; }
+  .switch { float: right; font-size: 14px; padding-top: 8px; }
+  .switch a { color: var(--accent); cursor: pointer; }
+  .switch a.on { color: var(--text); font-weight: 600; pointer-events: none; }
+  body[data-lang="zh"] .lang-en, body[data-lang="en"] .lang-zh { display: none; }
 </style>
 </head>
-<body>
+<body data-lang="zh">
 <main>
-  <h1>支持 / Support</h1>
-  <p class="meta">牛牛浏览器（NiuNiu Browser）· 适用于版本 1.1<br>
+  <div class="switch"><a id="btn-zh">中文</a> · <a id="btn-en">English</a></div>
 
-  <p class="lead">这是一款把数据留在自己手机上的浏览器。遇到问题先看下面的清单，多数情况可以在应用内解决。</p>
+  <div class="lang-zh">
+    <h1>支持</h1>
+    <p class="meta">牛牛浏览器（NiuNiu Browser）· 适用于版本 1.3</p>
 
-  <h2>一、常见问题</h2>
-  <dl>
-    <dt>广告过滤把正常内容拦掉了怎么办？</dt>
-    <dd>浏览页右上角盾牌 → 广告拦截详情 → 关闭「广告过滤」即可放行本页。想长期只拦某类域名，可在同页添加自定义拦截域名（会员功能）。</dd>
+    <p class="lead">这是一款把数据留在自己手机上的浏览器。遇到问题先看下面的清单，多数情况可以在应用内解决。</p>
 
-    <dt>「本页拦截」显示 0，是不是没生效？</dt>
-    <dd>不一定。计数只统计命中广告域名的资源加载失败，页面本身没有这类请求时就是 0，可对照「累计拦截」确认规则在工作。</dd>
+    <h2>一、常见问题</h2>
+    <dl>
+      <dt>广告过滤把正常内容拦掉了怎么办？</dt>
+      <dd>浏览页右上角盾牌 → 广告拦截详情 → 关闭「广告过滤」即可放行本页。旧版本保存的自定义拦截域名也能在同一页查看和移除。</dd>
 
-    <dt>网页视频调不出播放器 / 倍速没反应？</dt>
-    <dd>播放器只在检测到 HTML5 <code>&lt;video&gt;</code> 时出现。使用自研播放内核或 DRM 加密流的站点（部分长视频站）无法接管，这是系统 WebKit 的限制。</dd>
+      <dt>「本页拦截」显示 0，是不是没生效？</dt>
+      <dd>不一定。计数只统计命中广告域名的资源加载失败，页面本身没有这类请求时就是 0，可对照「累计拦截」确认规则在工作。</dd>
 
-    <dt>清晰度为什么只有部分视频能选？</dt>
-    <dd>清晰度只对 HLS 自适应流（m3u8）有意义，iOS 侧能控制的是峰值码率上限；单文件视频没有可切换的变体，这时面板就不显示。</dd>
+      <dt>网页视频调不出播放器 / 倍速没反应？</dt>
+      <dd>播放器只在检测到 HTML5 <code>&lt;video&gt;</code> 时出现。使用自研播放内核或 DRM 加密流的站点（部分长视频站）无法接管，这是系统 WebKit 的限制。</dd>
 
-    <dt>下载中断了会重新下吗？</dt>
-    <dd>不会。下载支持断点续传：切到后台会自动暂停，回到应用自动继续；手动暂停后可从断点接着下。</dd>
+      <dt>清晰度为什么只有部分视频能选？</dt>
+      <dd>清晰度只对 HLS 自适应流（m3u8）有意义，iOS 侧能控制的是峰值码率上限；单文件视频没有可切换的变体，这时面板就不显示。</dd>
 
-    <dt>私密空间忘了面容 / 换机怎么办？</dt>
-    <dd>可用设备密码进入。文件与钥匙串密钥都只在本机，<strong>不提供云端备份或找回</strong>，卸载应用或恢复出厂会永久丢失，请先移出重要文件。</dd>
+      <dt>下载中断了会重新下吗？</dt>
+      <dd>不会。下载支持断点续传：切到后台会自动暂停，回到应用自动继续；手动暂停后可从断点接着下。</dd>
 
-    <dt>无痕标签真的不留痕迹吗？</dt>
-    <dd>不写浏览历史；无痕标签使用独立的非持久站点数据，关闭标签即连同 Cookie 与缓存一起丢弃。书签只有你手动点「收藏」才会保存。网站侧仍能通过它自己的日志识别访问，这不在本应用可控范围内。</dd>
+      <dt>私密空间忘了面容 / 换机怎么办？</dt>
+      <dd>可用设备密码进入。文件与钥匙串密钥都只在本机，<strong>不提供云端备份或找回</strong>，卸载应用或恢复出厂会永久丢失，请先移出重要文件。</dd>
 
-    <dt>为什么没有小说、资讯入口？</dt>
-    <dd>本应用不内置任何内容源。主页的「小说」入口只有在你自己填写第三方 H5 网址后才会出现，内容由该网站自行提供。</dd>
-  </dl>
+      <dt>无痕标签真的不留痕迹吗？</dt>
+      <dd>不写浏览历史；无痕标签使用独立的非持久站点数据，关闭标签即连同 Cookie 与缓存一起丢弃。书签只有你手动点「收藏」才会保存。网站侧仍能通过它自己的日志识别访问，这不在本应用可控范围内。</dd>
 
-  <h2>二、会员与订阅</h2>
-  <ul>
-    <li>会员解锁的能力有两项：自定义拦截域名（最多 100 条）与私密空间（把文件加密后单独存放）。私密空间里已有的文件不受会员状态影响，到期后仍可取回；其余功能全部免费。</li>
-    <li>取消或管理订阅：iPhone「设置 → Apple ID → 订阅」。</li>
-    <li>换设备或重装后恢复购买：应用内「会员中心 → 恢复购买」，用同一个 Apple ID 即可。</li>
-    <li>退款由 Apple 处理，请在 <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> 提交。</li>
-  </ul>
+      <dt>英文界面为什么没有天气？</dt>
+      <dd>天气与定位目前只在中文界面提供。英文界面不会请求定位权限，其余功能不受影响。</dd>
+    </dl>
 
-  <h2>三、反馈时请一并说明</h2>
-  <ul>
-    <li>版本号（设置 → 关于）与机型、iOS 版本。</li>
-    <li>出现问题的网址（如果方便公开）和具体表现。</li>
-    <li>是否只在某个网站出现，还是所有页面都这样。</li>
-  </ul>
+    <h2>二、NiuNiu Pro 与购买</h2>
+    <ul>
+      <li>Pro 提供按月订阅、按年订阅和一次性买断，解锁净链接复制与分享、站点级保护、本机拦截统计和私密文件搜索。其余功能全部免费，包括广告过滤与私密空间的加密移入。</li>
+      <li>取消或管理订阅：iPhone「设置 → Apple ID → 订阅」；一次性买断没有续费。</li>
+      <li>换设备或重装后恢复购买：应用内「NiuNiu Pro → 恢复购买」，用同一个 Apple ID 即可。</li>
+      <li>退款由 Apple 处理，请在 <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> 提交。</li>
+    </ul>
 
-  <h2>四、联系我们</h2>
-  <address><a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></address>
-  <p>工作日 7 天内回复。</p>
+    <h2>三、反馈时请一并说明</h2>
+    <ul>
+      <li>版本号（设置 → 关于）与机型、iOS 版本。</li>
+      <li>出现问题的网址（如果方便公开）和具体表现。</li>
+      <li>是否只在某个网站出现，还是所有页面都这样。</li>
+    </ul>
 
-  <footer>
-    相关页面：<a href="niuniu-privacy.html">隐私政策 / Privacy Policy</a> ·
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 软件许可协议（标准 EULA）</a><br>
-    © 2026 NiuNiu Browser
-  </footer>
+    <h2>四、联系我们</h2>
+    <address><a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></address>
+    <p>工作日 7 天内回复。</p>
+
+    <footer>
+      相关页面：<a href="niuniu-privacy.html">隐私政策 / Privacy Policy</a> ·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 软件许可协议（标准 EULA）</a><br>
+      © 2026 NiuNiu Browser
+    </footer>
+  </div>
+
+  <div class="lang-en">
+    <h1>Support</h1>
+    <p class="meta">NiuNiu Browser · Applies to version 1.3</p>
+
+    <p class="lead">A browser that keeps your data on your own phone. Check the list below first; most issues can be resolved inside the app.</p>
+
+    <h2>1. Common questions</h2>
+    <dl>
+      <dt>Ad blocking blocked something it shouldn't.</dt>
+      <dd>On a page, tap the shield in the top-right, open Ad Blocking Details, and turn off Ad Blocking to allow this page. Custom blocking domains saved by earlier versions can also be viewed and removed on the same screen.</dd>
+
+      <dt>"Blocked on this page" shows 0. Is blocking working?</dt>
+      <dd>Not necessarily. The counter only counts failed resource loads that match blocked domains. If the page makes no such requests, it stays 0. Check the cumulative count to confirm the rules are active.</dd>
+
+      <dt>No player for web video, or speed controls do nothing.</dt>
+      <dd>The player appears only when an HTML5 <code>&lt;video&gt;</code> element is detected. Sites with custom players or DRM-protected streams (some long-form video sites) cannot be taken over; this is a WebKit limitation.</dd>
+
+      <dt>Why can I change quality for only some videos?</dt>
+      <dd>Quality selection only applies to adaptive HLS streams (m3u8), where the app controls the peak bitrate. Single-file videos have no switchable variants, so the option is hidden.</dd>
+
+      <dt>Will an interrupted download resume?</dt>
+      <dd>Yes. Downloads support resuming: they pause automatically when the app goes to the background and continue when you return. After a manual pause, you can resume from where it stopped.</dd>
+
+      <dt>I forgot my Face ID, or I switched phones. What about Private Space?</dt>
+      <dd>You can unlock with your device passcode. Files and the Keychain key exist only on this device, and <strong>there is no cloud backup or recovery</strong>. Deleting the app or erasing the device permanently loses them, so move important files out first.</dd>
+
+      <dt>Are private tabs really private?</dt>
+      <dd>They do not write browsing history, and they use separate non-persistent site data; closing the tab discards cookies and cache with it. Bookmarks are saved only when you tap Save. Websites can still identify visits in their own server logs, which is outside this app's control.</dd>
+
+      <dt>Why is there no weather in the English interface?</dt>
+      <dd>Weather and location are currently available in the Chinese interface only. The English interface does not request location permission; everything else works the same.</dd>
+    </dl>
+
+    <h2>2. NiuNiu Pro and purchases</h2>
+    <ul>
+      <li>Pro is available as a monthly subscription, a yearly subscription, or a one-time purchase. It unlocks clean link copying and sharing, per-site protection, on-device blocking statistics, and private file search. Everything else is free, including ad blocking and encrypting files into Private Space.</li>
+      <li>Manage or cancel a subscription in iPhone Settings → Apple ID → Subscriptions. The one-time purchase does not renew.</li>
+      <li>Restore after reinstalling or switching devices: open NiuNiu Pro in the app and tap Restore Purchases with the same Apple ID.</li>
+      <li>Refunds are handled by Apple at <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>.</li>
+    </ul>
+
+    <h2>3. What to include when reporting an issue</h2>
+    <ul>
+      <li>Version (Settings → About), device model, and iOS version.</li>
+      <li>The page URL, if you can share it, and what went wrong.</li>
+      <li>Whether it happens on one site or on every page.</li>
+    </ul>
+
+    <h2>4. Contact</h2>
+    <address><a href="mailto:niuniugede@gmail.com">niuniugede@gmail.com</a></address>
+    <p>Replies within 7 business days.</p>
+
+    <footer>
+      Related: <a href="niuniu-privacy.html">Privacy Policy</a> ·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a><br>
+      © 2026 NiuNiu Browser
+    </footer>
+  </div>
 </main>
+
+<script>
+(function(){
+  var KEY='nn-support-lang';
+  function set(l){
+    document.body.dataset.lang=l;
+    document.documentElement.lang=l==='zh'?'zh-Hans':'en';
+    document.getElementById('btn-zh').classList.toggle('on',l==='zh');
+    document.getElementById('btn-en').classList.toggle('on',l==='en');
+    try{localStorage.setItem(KEY,l)}catch(e){}
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(saved==='zh'||saved==='en'){set(saved)}
+  else{set((navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en')}
+  document.getElementById('btn-zh').addEventListener('click',function(){set('zh')});
+  document.getElementById('btn-en').addEventListener('click',function(){set('en')});
+})();
+</script>
 </body>
 </html>
